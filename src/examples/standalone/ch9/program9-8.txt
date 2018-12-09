@@ -1,0 +1,92 @@
+Module main()
+   // Constant for array sizes
+   Constant Integer SIZE = 6
+   
+   // Array of instructor names, already sorted in
+   // ascending order.
+   Declare String names[SIZE] = "Hall", "Harrison",
+                                "Hoyle", "Kimura",
+                                "Lopez", "Pike"
+
+   // Parallel array of instructor phone numbers
+    Declare String phones[SIZE] = "555-6783", "555-0199",
+                                  "555-9974", "555-2377", 
+                                  "555-7772", "555-1716"
+   
+   // Variable to hold the last name to search for.
+   Declare String searchName
+   
+   // Variable to hold the subscript of the name.
+   Declare Integer index
+   
+   // Variable to control the loop.
+   Declare String again = "Y"
+   
+   While (again == "Y" OR again == "y")
+      // Get the name to search for.
+      Display "Enter a last name to search for."
+      Input searchName
+ 
+      // Search for the last name.
+      Set index = binarySearch(names, searchName, SIZE)
+      
+      If index != -1 Then
+         // Display the phone number
+         Display "The phone number is ", phones[index]
+      Else
+         // The name was not found in the array.
+         Display searchName, " was not found."
+      End If
+      
+      // Search again?
+      Display "Do you want to search again? (Y=Yes, N=No)"
+      Input again
+   End While
+   
+End Module
+
+// The binarySearch function accepts as arguments an Integer
+// array, a value to search the array for, and the size
+// of the array. If the value is found in the array, its
+// subscript is returned. Otherwise, - 1 is returned,
+// indicating that the value was not found in the array.
+Function Integer binarySearch(String array[], String value,
+                              Integer arraySize)
+   // Variable to hold the subscript of the first element.
+   Declare Integer first = 0
+
+   // Variable to hold the subscript of the last element.
+   Declare Integer last = arraySize - 1
+
+   // Position of the search value
+   Declare Integer position = - 1
+
+   // Flag
+   Declare Boolean found = False
+   
+   // Variable to hold the subscript of the midpoint.
+   Declare Integer middle
+   
+   While (NOT found) AND (first <= last)
+      // Calculate the midpoint.
+      Set middle = (first + last) / 2
+   
+      // See if the value is found at the midpoint...
+      If array[middle] == value Then
+         Set found = True
+         Set position = middle
+   
+      // Else, if the value is in the lower half...
+      Else If array[middle] > value Then
+         Set last = middle - 1
+   
+      // Else, if the value is in the upper half...
+      Else
+         Set first = middle + 1
+      End If
+   End While
+   
+   // Return the position of the item, or - 1
+   // if the item was not found.
+   Return position
+End Function

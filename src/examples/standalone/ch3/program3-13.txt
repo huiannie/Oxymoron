@@ -1,0 +1,61 @@
+// Global constant for the rate of contribution.
+Constant Real CONTRIBUTION_RATE = 0.05
+
+// main module
+Module main()
+   // Local variables
+   Declare Real annualGrossPay
+   Declare Real totalBonuses
+
+   // Get the annual gross pay.
+   Call getGrossPay(annualGrossPay)
+
+   // Get the total of the bonuses.
+   Call getBonuses(totalBonuses)
+
+   // Display the contribution for
+   // the gross pay.
+   Call showGrossPayContrib(annualGrossPay)
+
+   // Display the contribution for
+   // the bonuses.
+   Call showBonusContrib(totalBonuses)
+End Module
+
+// The getGrossPay module gets the
+// gross pay and stores it in the
+// grossPay reference variable.
+Module getGrossPay(Real Ref grossPay)
+   Display "Enter the total gross pay."
+   Input grossPay
+End Module
+
+// The getBonuses module gets the
+// amount of bonuses and stores it
+// in the bonuses reference variable.
+Module getBonuses(Real Ref bonuses)
+   Display "Enter the amount of bonuses."
+   Input bonuses
+End Module
+
+// The showGrossPayContrib module
+// accepts the gross pay as an argument
+// and displays the retirement contribution
+// for gross pay.
+Module showGrossPayContrib(Real grossPay)
+   Declare Real contrib
+   Set contrib = grossPay * CONTRIBUTION_RATE
+   Display "The contribution for the gross pay"
+   Display "is $", contrib
+End Module
+
+// The showBonusContrib module accepts
+// the bonus amount as an argument and
+// displays the retirement contribution
+// for bonuses.
+Module showBonusContrib(Real bonuses)
+   Declare Real contrib
+   Set contrib = bonuses * CONTRIBUTION_RATE
+   Display "The contribution for the bonuses"
+   Display "is $", contrib
+End Module

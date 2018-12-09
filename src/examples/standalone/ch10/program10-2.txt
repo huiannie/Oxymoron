@@ -1,0 +1,25 @@
+// Declare an internal name for an input file.
+Declare InputFile myFile
+
+// Declare three variables to hold values
+// that will be read from the file.
+Declare String name1, name2, name3
+
+// Open a file named philosophers.dat on
+// the disk.
+Open myFile "philosophers.dat"
+
+// Read the names of three philosophers
+// from the file.
+Read myFile name1
+Read myFile name2
+Read myFile name3
+
+// Close the file.
+Close myFile
+
+// Display the names that were read.
+Display "Here are the names of three philosophers:"
+Display name1
+Display name2
+Display name3

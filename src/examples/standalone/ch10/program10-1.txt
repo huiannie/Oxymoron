@@ -1,0 +1,15 @@
+// Declare an internal name for an output file.
+Declare OutputFile myFile
+
+// Open a file named philosophers.dat on
+// the disk.
+Open myFile "philosophers.dat"
+
+// Write the names of three philosophers
+// to the file.
+Write myFile "John Locke"
+Write myFile "David Hume"
+Write myFile "Edmund Burke"
+
+// Close the file.
+Close myFile

@@ -1,0 +1,8 @@
+Declare Integer hours, minutes, seconds
+For hours = 0 To 23
+   For minutes = 0 To 59
+      For seconds = 0 To 59
+         Display hours, ":", minutes, ":", seconds
+      End For
+   End For
+End For

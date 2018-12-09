@@ -1,0 +1,13 @@
+Module main()
+   // By passing the argument 5 to the message module,
+   // We are telling it to display the message
+   // five times.
+   Call message(5)
+End Module
+
+Module message(Integer times)
+   If times > 0 Then
+      Display "This is a recursive module."
+      Call message(times - 1)
+   End If
+End Module

@@ -1,0 +1,26 @@
+Module main()
+   // Local variable to use as a counter.
+   Declare Integer counter
+   
+   // Display an introductory message.
+   Display "The first 10 numbers in the ",
+           "Fibonacci series are:"
+   
+   // use a loop to call the fib function, passing
+   // the values 1 through 10 as an argument.
+   For counter = 1 To 10
+      Display fib(counter)
+   End For
+End Module
+
+// The fib function returns the nth number
+// in the Fibonacci series.
+Function Integer fib(Integer n)
+   If n==0 Then
+      Return 0
+   Else If n == 1 Then
+      Return 1
+   Else
+      Return fib(n - 1) + fib(n - 2)
+   End If
+End Function

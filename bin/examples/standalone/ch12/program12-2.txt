@@ -1,0 +1,10 @@
+// Declare and initialize a string.
+Declare String name = "Jacob"
+
+// Declare a variable to step through the string.
+Declare Integer index
+
+// Display the characters in the string.
+For index = 0 To length(name) - 1
+   Display name[index]
+End For

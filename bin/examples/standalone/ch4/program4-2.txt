@@ -1,0 +1,69 @@
+// Global constants
+Constant Integer BASE_HOURS = 40
+Constant Real OT_MULTIPLIER = 1.5
+
+Module main()
+   // Local variables
+   Declare Real hoursWorked, payRate, grossPay
+
+   // Get the number of hours worked.
+   Call getHoursWorked(hoursWorked)
+
+   // Get the hourly pay rate.
+   Call getPayRate(payRate)
+
+   // Calculate the gross pay.
+   If hoursWorked > BASE_HOURS Then
+      Call calcPayWithOT(hoursWorked, payRate, 
+                         grossPay)
+   Else
+       Call calcRegularPay(hoursWorked, payRate, 
+                          grossPay)
+   End If
+    
+   // Display the gross pay.
+   Display "The gross pay is $", grossPay
+End Module
+
+// The getHoursWorked module gets the number
+// of hours worked and stores it in the 
+// hours parameter.
+Module getHoursWorked(Real Ref hours)
+   Display "Enter the number of hours worked."
+   Input hours
+End Module
+
+// The getPayRate module gets the hourly
+// pay rate and stores it in the rate
+// parameter.
+Module getPayRate(Real Ref rate)
+   Display "Enter the hourly pay rate."
+   Input rate
+End Module
+
+// The calcPayWithOT module calculates pay
+// with overtime. The gross pay is stored
+// in the gross parameter.
+Module calcPayWithOT(Real hours, Real rate,
+                     Real Ref gross)
+   // Local variables
+   Declare Real overtimeHours, overtimePay
+
+   // Calculate the number of overtime hours.
+   Set overtimeHours = hours - BASE_HOURS
+
+   // Calculate the overtime pay
+   Set overtimePay = overtimeHours * rate *
+                     OT_MULTIPLIER
+
+   // Calculate the gross pay.
+   Set gross = BASE_HOURS * rate + overtimePay
+End Module
+
+// The calcRegularPay module calculates
+// pay with no overtime and stores it in
+// the gross parameter
+Module calcRegularPay(Real hours, Real rate,
+                      Real Ref gross)
+   Set gross = hours * rate
+End Module

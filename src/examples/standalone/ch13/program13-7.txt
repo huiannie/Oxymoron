@@ -1,0 +1,67 @@
+Module main()
+   // Declare a constant for the array size.
+   Constant Integer SIZE = 20
+   
+   // Declare an array of employee ID numbers.
+   Declare Integer numbers[SIZE] = 101, 142, 147, 189, 199,
+                                   207, 222, 234, 289, 296,
+                                   310, 319, 388, 394, 417,
+                                   429, 447, 521, 536, 600
+   
+   // Declare a variable to hold an ID number.
+   Declare Integer empID
+   
+   // Declare a variable to hold the search results.
+   Declare Integer result
+   
+   // Get an employee ID number to search for.
+   Display "Enter an employee ID number."
+   Input empID
+   
+   // Search for the ID number in the array.
+   Set result = binarySearch(numbers, 0, SIZE - 1, empID)
+   
+   // Display the result of the search.
+   If result == -1 Then
+      Display "That employee ID number was not found."
+   Else
+      Display "That employee ID number was found ",
+              "at subscript ", result
+   End If
+End Module
+
+// The binarySearch function performs a recursive binary search
+// on a range of elements in an Integer array. The parameter
+// array holds the array to be searched. The parameter first
+// holds the subscript of the range's starting element, and the
+// parameter last holds the subscript of the range's last element.
+// The parameter value holds the search value. If the search value
+// is found, its array subscript is returned. Otherwise, -1 is
+// returned indicating the value is not in the array.
+Function Integer binarySearch(Integer array[],
+                Integer first, Integer last, Integer value)
+   // Local variable to hold the subscript of the element
+   
+   // in the middle of the search area.
+   Declare Integer middle
+   
+   // First, see if there are any elements to search.
+   If first > last Then
+      Return -1
+   End If
+
+   // Calculate the mid point of the search area.
+   Set middle = (first + last) / 2
+   
+   // See if the value is found at the mid point . . .
+   If array[middle] == value Then
+      Return middle
+   End If
+   
+   // Search either the upper or lower half.
+   If array[middle] < value Then
+      Return binarySearch(array, middle + 1, last, value)
+   Else
+      Return binarySearch(array, first, middle - 1, value)
+   End If
+End Function

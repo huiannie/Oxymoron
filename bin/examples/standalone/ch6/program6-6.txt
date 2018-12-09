@@ -1,0 +1,25 @@
+Module main()
+   // Local variables
+   Declare Integer firstAge, secondAge, total
+   
+   // Get the user's age and the user's
+   // best friend's age
+   Display "Enter your age."
+   Input firstAge
+   Display "Enter your best friend's age."
+   Input secondAge
+   
+   // Get the sum of both ages.
+   Set total = sum(firstAge, secondAge)
+   
+   // Display the sum.
+   Display "Together you are ", total, " years old."
+End Module
+
+// The sum function accepts two Integer arguments and
+// returns the sum of those arguments as an Integer
+Function Integer sum(Integer num1, Integer num2)
+   Declare Integer result
+   Set result = num1 + num2
+   Return result
+End Function

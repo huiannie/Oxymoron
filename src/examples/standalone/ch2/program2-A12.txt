@@ -1,0 +1,3 @@
+Declare Integer num = 99
+Set num = 5
+Display num

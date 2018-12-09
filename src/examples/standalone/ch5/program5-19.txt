@@ -1,0 +1,41 @@
+Module main()
+   // Local variable for the lot number
+   Declare Integer lotNumber
+   
+   // Get the first lot number.
+   Display "Enter the property's lot number"
+   Display "(or enter 0 to end)."
+   Input lotNumber
+   
+   // Continue processing as long as the user
+   // does not enter lot number 0.
+   While lotNumber ! = 0
+      // Show the tax for the property.
+      Call showTax()
+      
+      // Get the next lot number.
+      Display "Enter the lot number for the"
+      Display "next property (or 0 to end)."
+      Input lotNumber
+   End While
+End Module
+
+// The showTax module gets a property's
+// value and displays its tax.
+Module showTax()
+   // Local variables
+   Declare Real propertyValue, tax
+   
+   // Constant for the tax factor.
+   Constant Real TAX_FACTOR = 0.0065
+   
+   // Get the property's value.
+   Display "Enter the property's value."
+   Input propertyValue
+   
+   // Calculate the property's tax.
+   Set tax = propertyValue * TAX_FACTOR
+   
+   // Display the tax.
+   Display "The property's tax is $", tax
+End Module

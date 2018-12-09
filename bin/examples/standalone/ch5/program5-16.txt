@@ -1,0 +1,12 @@
+// Declare a counter variable
+Declare Integer counter = 1
+
+// Constant for the maximum value
+Constant Integer MAX_VALUE = 11
+
+// Display the odd numbers from 1
+// through 11.
+While counter <= MAX_VALUE
+   Display counter
+   Set counter = counter + 2
+End While

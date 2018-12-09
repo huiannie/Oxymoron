@@ -1,0 +1,6 @@
+Declare String password
+Display "Enter your new password."
+Input password
+If length(password) < 6 Then
+   Display "The password must be at least six characters long."
+End If

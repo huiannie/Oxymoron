@@ -1,0 +1,24 @@
+// Declare variables
+Declare Real salary, yearsOnJob
+
+// Get the annual salary
+Display "Enter your annual salary."
+Input salary
+
+// Get the number of years on the current job.
+Display "Enter the number of years on your"
+Display "current job."
+Input yearsOnJob
+
+// Determine whether the user qualifies.
+If salary >= 30000 Then
+   If yearsOnJob >= 2 Then
+      Display "You qualify for the loan."
+   Else
+      Display "You must have been on your current"
+      Display "job for at least two years to qualify."
+   End If
+Else
+   Display "You must earn at least $30,000"
+   Display "per year to qualify."
+End If

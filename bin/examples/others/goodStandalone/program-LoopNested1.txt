@@ -1,0 +1,28 @@
+Declare Integer A=0, B=9, C=10, D=9, E=2
+Declare Real U=1.4, V=1.9
+Declare String X="Hi", Y="Bye", Z="ok"
+Set C = -5
+Display "C is ", C
+While C<0
+   Set C = C+1
+   Display "C is ", C
+   Display Y
+   Do
+      If X=="Hi" Then
+         Display A
+         While A>=-10
+            Display U
+            Set A = A-1
+         End While
+      Else If Y=="Bye" Then
+         Display D
+         Display A
+      End If
+      Display X
+      While E>0
+         Display X
+         Set E = E - 1
+      End While
+      Set C = C+1   
+   Until C>-2
+End While

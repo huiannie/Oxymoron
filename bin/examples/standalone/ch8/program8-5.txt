@@ -1,0 +1,40 @@
+// Declare a constant for the array size.
+Constant Integer SIZE = 100
+
+// Declare an array to hold integer values.
+Declare Integer values[SIZE]
+
+// Declare an Integer variable to hold the number of items.
+// that are actually stored in the array.
+Declare Integer count = 0
+
+// Declare an Integer variable to hold the user's input.
+Declare Integer number
+
+// Declare a variable to step through the array.
+Declare Integer index
+
+// Prompt the user to enter a number. If the user enters the
+// sentinel value - 1 we will stop accepting input.
+Display "Enter a number or - 1 to quit."
+Input number
+
+// If the input is not - 1 and the array is not
+// full, process the input.
+While (number != -1 AND count < SIZE)
+   // Store the input in the array.
+   Set values[count] = number
+   
+   // Increment count.
+   Set count = count + 1
+   
+   // Prompt the user for the next number.
+   Display "Enter a number or -1 to quit."
+   Input number
+End While
+
+// Display the values stored in the array.
+Display "Here are the numbers you entered:"
+For index = 0 To count - 1
+   Display values[index]
+End For

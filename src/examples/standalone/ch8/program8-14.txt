@@ -1,0 +1,94 @@
+Module main()
+   // A constant for the array size.
+   Constant Integer SIZE = 4
+
+   // An array to hold test scores.
+   Declare Real testScores[SIZE]
+
+   // Variable to hold the total of scores.
+   Declare Real total
+
+   // Variable to hold the lowest score.
+   Declare Real lowestScore
+
+   // Variable to hold the average score.
+   Declare Real average
+    
+   // Get the test scores from the user.
+   Call getTestScores(testScores, SIZE)
+   
+   // Get the total of the test scores.
+   Set total = getTotal(testScores, SIZE)
+
+   // Get the lowest test score.
+   Set lowestScore = getLowest(testScores, SIZE)
+
+   // Subtract the lowest score from the total.
+   Set total = total - lowestScore
+   
+   // Calculate the average. Divide by 3
+   // because the lowest score was dropped.
+   Set average = total / (SIZE - 1)
+
+   // Display the average
+   Display "The average with the lowest score"
+   Display "dropped is ", average
+End Module
+
+// The getTestScores module accepts an array (by reference)
+// and its size as arguments.It prompts the user to enter
+// test scores, which are stored in the array
+Module getTestScores(Real Ref scores[], Integer arraySize)
+   // Loop counter
+   Declare Integer index
+   
+   // Get each test score.
+   For index = 0 To arraySize - 1
+      Display "Enter test score number ", index + 1
+      Input scores[index]
+   End For
+End Module
+   
+// The getTotal function accepts a Real array and its
+// size as arguments. It returns the total of the
+// array elements.
+Function Real getTotal(Real array[], Integer arraySize)
+   // Loop counter
+   Declare Integer index
+   
+   // Accumulator, initialized to 0
+   Declare Real total = 0
+   
+   // Calculate the total of the array elements.
+   For index = 0 To arraySize - 1
+      Set total = total + array[index]
+   End For
+
+   // Return the total
+   Return total
+End Function
+
+// The getLowest function accepts a Real array and its
+// size as arguments. It returns the lowest value in
+// the array.
+Function Real getLowest(Real array[], Integer arraySize)
+   // Variable to hold the lowest value.
+   Declare Real lowest
+
+   // Loop counter
+   Declare Integer index
+
+   // Get the first element of the array.
+   Set lowest = array[0]
+
+   // Step through the rest of the array. When a value
+   // less than lowest is found, assign it to lowest.
+   For index = 1 To arraySize - 1
+      If array[index] < lowest Then
+         Set lowest = array[index]
+      End If
+   End For
+   
+   // Return the lowest value.
+   Return lowest
+End Function

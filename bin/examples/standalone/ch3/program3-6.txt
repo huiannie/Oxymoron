@@ -1,0 +1,15 @@
+Module main ()
+   Declare Integer number
+   Display "Enter a number and I will display"
+   Display "that number doubled."
+   Input number
+   Call doubleNumber(number)
+End Module
+
+Module doubleNumber(Integer value)
+   Declare Integer result
+   Set result = value * 2
+   Display result
+End Module
+
+

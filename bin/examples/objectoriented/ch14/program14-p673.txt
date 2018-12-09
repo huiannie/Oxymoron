@@ -1,0 +1,43 @@
+Module main()
+
+   Constant Integer numberOfCustomers = 5
+   Declare Customer customers[numberOfCustomers]
+   Declare ServiceQuote quote[numberOfCustomers]
+   Declare Real taxRate = 0.05
+    
+   
+   Constant String dummy1 = "Name"
+   Constant String dummy2 = "Address"
+
+   Declare String name
+   Declare String address
+   Declare String phone
+   Declare Integer index
+   
+   For index=0 To numberOfCustomers-1
+      // Initialize to unknown 
+      Set customers[index] = New Customer("unknown", "unknown", "unknown")
+      // Set some random values to the fields
+      Call customers[index].setName(append(dummy1, integerToString(index)))
+      Call customers[index].setAddress(append(dummy2, integerToString(index)))
+      Call customers[index].setPhone(integerToString(random(500, 1000)))
+      
+      Set quote[index] = New ServiceQuote(random(1,100) * 10.0, random(1,100) * 4)
+   End For
+   
+   For index=0 To numberOfCustomers-1
+      Display "Customer: ", customers[index].getName(), ", ", Tab, customers[index].getAddress(), ", ", Tab, customers[index].getPhone()
+   End For
+
+   For index=0 To numberOfCustomers-1
+      Display "Quote: ", quote[index].getPartsCharges(), ", ", Tab, quote[index].getLaborCharges(), ", ", Tab, quote[index].getTotalCharges(taxRate)
+   End For
+
+   // Sum up the total 
+   Declare Real total = 0
+   For index=0 To numberOfCustomers-1
+      Set total = total + quote[index].getTotalCharges(taxRate)
+   End For
+
+   Display "Total is: ", Tab, Tab, total
+End Module

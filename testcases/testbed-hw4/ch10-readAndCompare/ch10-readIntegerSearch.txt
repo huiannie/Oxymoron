@@ -1,0 +1,34 @@
+Module main()
+   Declare Integer array[100]
+   Declare InputFile infile
+   Declare Integer total = 0
+   Declare Integer counter
+   Declare Integer value
+   Declare Boolean found
+
+   Open infile "input-integer2.txt"
+
+   While NOT eof(infile) AND total<100
+      Read infile array[total]
+      Set total = total + 1
+   End While
+
+   Close infile
+
+   Display "Enter an integer."
+   Input value
+
+   Set found = False
+   For counter = 0 To total-1
+      If array[counter]>value Then
+         Set found = True
+      End If
+   End For
+
+   If found Then
+      Display "Yes, found a larger number."
+   Else
+      Display "Not found."
+   End If
+
+End Module

@@ -1,0 +1,10 @@
+Module main()
+   Declare Integer num
+   Call getNumber (num)
+   Display "The number is ", num
+End Module
+
+Module getNumber (Integer Ref value)
+   Display "Enter number:"
+   Input value
+End Module

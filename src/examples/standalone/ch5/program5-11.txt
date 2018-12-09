@@ -1,0 +1,16 @@
+// Declare variables to hold speeds in MPH and KPH.
+Declare Real mph
+Declare Integer kph
+
+// Display the table headings.
+Display "KPH", Tab, "MPH"
+Display "-----------------------"
+
+// Display the speeds.
+For kph = 60 To 130 Step 10
+   // Calculate the miles-per-hour.
+   Set mph = kph * 0.6214
+   
+   // Display KPH and MPH.
+   Display kph, Tab, mph
+End For

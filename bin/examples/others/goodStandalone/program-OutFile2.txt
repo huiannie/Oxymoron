@@ -1,0 +1,21 @@
+Constant Integer SIZE = 5
+Declare String filenames[SIZE] = "out1.txt", "out2.txt", "out3.txt", "out4.txt", "out5.txt"
+Declare OutputFile outfiles[SIZE]
+
+// Declare a counter variable for the loop
+Declare Integer counter
+Declare Integer number
+
+// Explain what we are doing.
+Display "This program output data to ", SIZE, " files."
+
+
+For counter = 0 To SIZE - 1
+   Display "Enter a number."
+   Input number
+   Open outfiles[counter] filenames[counter]
+   Write outfiles[counter] counter, number
+   Close outfiles[counter]
+   Display "Value ", number, " is saved to file ", filenames[counter]
+End For
+

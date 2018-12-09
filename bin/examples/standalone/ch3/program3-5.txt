@@ -1,0 +1,11 @@
+Module main ()
+   Call doubleNumber(4)
+End Module
+
+Module doubleNumber(Integer value)
+   Declare Integer result
+   Set result = value * 2
+   Display result
+End Module
+
+

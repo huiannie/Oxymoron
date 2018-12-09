@@ -1,0 +1,19 @@
+// Declare a string to hold input.
+Declare String str
+
+// Declare a variable to step through the string.
+Declare Integer index
+
+// Prompt the user to enter a sentence.
+Display "Enter a sentence."
+Input str
+
+// Change each "t" to a "d".
+For index = 0 To length(str) - 1
+   If str[index] == "t" Then
+      Set str[index] = "d"
+   End If
+End For
+
+// Display the modified string.
+Display str

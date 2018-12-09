@@ -1,0 +1,19 @@
+// Declare a constant for the array size.
+Constant Integer SIZE = 5
+
+// Declare an array initialized with values.
+Declare Integer numbers[SIZE] = 2, 4, 6, 8, 10
+
+// Declare and initialize an accumulator variable
+Declare Integer total = 0
+
+// Declare a counter variable for the loop.
+Declare Integer index
+
+// Calculate the total of the array elements.
+For index = 0 To SIZE - 1
+   Set total = total + numbers[index]
+End For
+
+// Display the sum of the array elements.
+Display "The sum of the array elements is ", total

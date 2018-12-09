@@ -1,0 +1,18 @@
+// Declare the necessary variables (Note: For division to result in Real, either numerator or denominator must be Real)
+Declare Real hits
+Declare Real atBat
+Declare Real battingAverage
+
+// Get the number of hits
+Display "Enter the player's number of hits."
+Input hits
+
+// Get the number of times at bat
+Display "Enter the player's number of times at bat."
+Input atBat
+
+// Calculate the batting average.
+Set battingAverage = hits / atBat
+
+// Display the batting average
+Display "The player's batting average is ", battingAverage

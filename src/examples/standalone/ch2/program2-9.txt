@@ -1,0 +1,6 @@
+Declare Real originalPrice, discount, salePrice
+Display "Enter the item's original price."
+Input originalPrice
+Set discount = originalPrice * 0.2
+Set salePrice = originalPrice - discount
+Display "The sale price is $", salePrice

@@ -1,0 +1,23 @@
+Declare Integer A=4, B=3, C=4, D=1, E=9, X=3, Y=43, Z=32
+
+While Y>0
+   Declare Integer X = 1
+   While X <= 4
+      Declare Integer A = 10
+      Display "Local A is ", A
+      Set X = X + 1
+   End While
+   Display "X is ", X
+   Display "Global A is ", A
+   Do
+      Set C = C - 1
+      Display "B is ", B, " and C is ", C
+   Until C+B<=0
+   Display "C+B is ", C+B
+   Do
+      Set Z = Z - 1
+      Display "D is ", D
+   While Z>=0
+   Display "E is ", E
+   Set Y = Y-1
+End While

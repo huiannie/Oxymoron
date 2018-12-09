@@ -1,0 +1,19 @@
+Module main()
+   Declare String array[100]
+   Declare InputFile infile
+   Declare Integer total = 0
+   Declare Integer counter
+
+   Open infile "input-string1.txt"
+
+   While NOT eof(infile) AND total<100
+      Read infile array[total]
+      Set total = total + 1
+   End While
+
+   Close infile
+
+   For counter = 0 To total-1
+      Display array[counter]
+   End For
+End Module

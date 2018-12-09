@@ -1,0 +1,7 @@
+Declare Integer area=10, length=20
+Set area = length^2
+Display "area = ", area
+
+Declare Integer leftover
+Set leftover = 17 MOD 3
+Display "leftover = ", leftover

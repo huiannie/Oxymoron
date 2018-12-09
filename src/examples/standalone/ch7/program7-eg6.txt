@@ -1,0 +1,10 @@
+Declare String answer
+// Get the answer to the question.
+Display "Is your supervisor an effective leader?"
+Input answer
+// Validate the input.
+While answer != "yes" AND answer != "no"
+   Display "Please answer yes or no. Is your supervisor an"
+   Display "effective leader?"
+   Input answer
+End While

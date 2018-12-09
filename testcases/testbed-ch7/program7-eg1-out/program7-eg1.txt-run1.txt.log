@@ -1,0 +1,5 @@
+Enter a test score.
+-89
+ERROR: The score cannot be less than 0.
+Enter the correct score.
+0

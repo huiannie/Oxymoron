@@ -1,0 +1,13 @@
+// Declare variables
+Declare Integer number, counter
+
+// The following loop displays
+// five random numbers.
+For counter = 1 To 5
+   // Get a random number in the range of
+   // 1 through 100 and assign it to number.
+   Set number = random(1, 100)
+   
+   // Display the number
+   Display number
+End For

@@ -1,0 +1,36 @@
+Class GradedActivity
+   // The score field holds a numeric score.
+   Private Real score
+   
+   // Mutator
+   Public Module setScore(Real s)
+      Set score = s
+   End Module
+   
+   // Accessor
+   Public Function Real getScore()
+      Return score
+   End Function
+   
+   // getGrade method
+   Public Function String getGrade()
+      // Local variable to hold a grade.
+      Declare String grade
+      
+      // Determine the grade.
+      If score >= 90 Then
+         Set grade = "A"
+      Else If score >= 80 Then
+         Set grade = "B"
+      Else If score >= 70 Then
+         Set grade = "C"
+      Else If score >= 60 Then
+         Set grade = "D"
+      Else
+         Set grade = "F"
+      End If
+      
+      // Return the grade
+      Return grade
+   End Function
+End Class

@@ -1,0 +1,15 @@
+Module main ()
+   Declare Integer x = 1
+   Declare Real y = 3.4
+   Display x, " ", y
+   Call changeUs(x, y)
+   Display x, " ", y
+End Module
+
+Module changeUs(Integer Ref a, Real Ref b)
+   Set a = 0
+   Set b = 0
+   Display a, " ", b
+End Module
+
+

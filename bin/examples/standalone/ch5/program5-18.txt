@@ -1,0 +1,24 @@
+// Declare a variable to hold each number
+// entered by the user.
+Declare Integer number
+
+// Declare an accumulator variable
+// initialized with 0
+Declare Integer total = 0
+
+// Declare a counter variable for the loop
+Declare Integer counter
+
+// Explain what we are doing.
+Display "This program calculates the"
+Display "total of five numbers."
+
+// Get five numbers and accumulate them.
+For counter = 1 To 5
+   Display "Enter a number."
+   Input number
+   Set total = total + number
+End For
+
+// Display the total of the numbers.
+Display "The total is ", total

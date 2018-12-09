@@ -1,0 +1,24 @@
+// Create a constant for the number of employees.
+Constant Integer SIZE = 3
+
+// Declare an array to hold the number of hours
+// worked by each employee.
+Declare Integer hours[SIZE]
+
+// Get the hours worked by employee 1.
+Display "Enter the hours worked by employee 1."
+Input hours[0]
+
+// Get the hours worked by employee 2.
+Display "Enter the hours worked by employee 2."
+Input hours[1]
+
+// Get the hours worked by employee 3.
+Display "Enter the hours worked by employee 3."
+Input hours[2]
+
+// Display the values entered.
+Display "The hours you entered are:"
+Display hours[0]
+Display hours[1]
+Display hours[2]

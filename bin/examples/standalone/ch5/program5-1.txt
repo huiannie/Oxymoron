@@ -1,0 +1,22 @@
+// Variable declarations 
+Declare Real sales, commission
+Declare String keepGoing = "y"
+
+// Constant for the commission rate
+Constant Real COMMISSION_RATE = 0.10
+
+While keepGoing == "y"
+   // Get the amount of sales.
+   Display "Enter the amount of sales."
+   Input sales
+   
+   // Calculate the commission.
+   Set commission = sales * COMMISSION_RATE
+   
+   // Display the commission
+   Display "The commission is $", commission
+   
+   Display "Do you want to calculate another"
+   Display "commission? (Enter y for yes.)"
+   Input keepGoing
+End While

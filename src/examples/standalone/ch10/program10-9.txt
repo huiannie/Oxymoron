@@ -1,0 +1,39 @@
+// Variables for the fields
+Declare String description
+Declare Real quantity
+
+// A variable to control the loop.
+Declare String another = "Y"
+
+// Declare an output file in append mode.
+Declare OutputFile AppendMode coffeeFile
+
+// Open the file.
+Open coffeeFile "coffee.dat"
+
+While toUpper(another) == "Y"
+   // Get the description.
+   Display "Enter the description."
+   Input description
+   
+   // Get the quantity on hand.
+   Display "Enter the quantity on hand ",
+           "(in pounds)."
+   Input quantity
+   
+   // Append the record to the file.
+   Write coffeeFile description, quantity
+   
+   // Determine whether the user wants to enter
+   // another record.
+   Display "Do you want to enter another record?"
+   Display "(Enter Y for yes, or anything else for no.)"
+   Input another
+   
+   // Display a blank line.
+   Display
+End While
+
+// Close the file.
+Close coffeeFile
+Display "Data appended to coffee.dat"

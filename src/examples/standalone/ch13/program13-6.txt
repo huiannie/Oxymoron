@@ -1,0 +1,29 @@
+Module main()
+   // Local variables to hold user input.
+   Declare Integer num1, num2
+   
+   // Get a number from the user.
+   Display "Enter an integer."
+   Input num1
+   
+   // Get another number from the user.
+   Display "Enter another integer."
+   Input num2
+   
+   // Display the GCD.
+   Display "The greatest common divisor of these"
+   Display "two numbers is ", gcd(num1, num2)
+End Module
+
+// The gcd function returns the greatest common
+// divisor of the arguments passed into x and y.
+Function Integer gcd(Integer x, Integer y)
+   // Determine whether x can be divided evenly by y.
+   // If so, we've reached the base case.
+   If y == 0 Then
+      Return x
+   Else 
+      // This is the recursive case.
+      Return gcd(y, x MOD y)
+   End If
+End Function

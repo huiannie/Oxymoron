@@ -1,0 +1,10 @@
+// Declare and initialize a string.
+Declare String name = "Jacob"
+
+// Use subscript notation to display the 
+// individual characters in the string.
+Display name[0]
+Display name[1]
+Display name[2]
+Display name[3]
+Display name[4]

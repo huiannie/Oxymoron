@@ -1,0 +1,31 @@
+Function Integer A()
+   Return 1
+End Function
+
+Function Integer B(Integer X)
+   Return 1
+End Function
+
+Function Integer C(Integer X[])
+   Return 1
+End Function
+
+Function Integer D(Integer X, Integer Ref Y)
+   Return X
+End Function
+
+Function Integer E(Integer X, Integer Ref Y, Integer Z[])
+   Return X
+End Function
+
+// Arrays are currently not accepted as return values
+Function Integer F()
+   Declare Integer A[1]
+   Return A[0]
+End Function
+
+// Arrays are currently not accepted as return values
+Function Integer G(Integer X)
+   Declare Integer B[1]
+   Return B[0]
+End Function

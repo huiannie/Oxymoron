@@ -1,0 +1,20 @@
+// Variables
+Declare Integer counter, square, upperLimit
+
+// Get the upper limit.
+Display "This program displays numbers, starting at 1,"
+Display "and their squares. How high should I go?"
+Input upperLimit
+
+// Display table headings.
+Display "Number", Tab, "Square"
+Display "-----------------------"
+
+// Display the numbers and their squares.
+For counter = 1 To upperLimit
+   // Calculate number squared.
+   Set square = counter^2
+
+   // Display number and number squared.
+   Display counter, Tab, square
+End For

@@ -1,0 +1,11 @@
+Class Animal
+   // showSpecies method
+   Public Module showSpecies()
+      Display "I'm just a regular animal."
+   End Module
+   
+   // makeSound method
+   Public Module makeSound()
+      Display "Grrrrr"
+   End Module
+End Class

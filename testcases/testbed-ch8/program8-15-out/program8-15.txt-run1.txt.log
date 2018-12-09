@@ -1,0 +1,33 @@
+Enter the name of employee 1
+Jamie Lynn
+Enter the hours worked by that employee.
+10
+Enter the name of employee 2
+Courtney
+Enter the hours worked by that employee.
+20
+Enter the name of employee 3
+Ashley
+Enter the hours worked by that employee.
+15
+Enter the name of employee 4
+Brian
+Enter the hours worked by that employee.
+40
+Enter the name of employee 5
+Jane
+Enter the hours worked by that employee.
+20
+Enter the name of employee 6
+Ian
+Enter the hours worked by that employee.
+18
+Enter the hourly pay rate.
+12.75
+Here is each empolyee's gross pay.
+Jamie Lynn: $127.50
+Courtney: $255.00
+Ashley: $191.25
+Brian: $510.00
+Jane: $255.00
+Ian: $229.50

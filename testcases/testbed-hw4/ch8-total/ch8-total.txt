@@ -1,0 +1,29 @@
+Module main()
+   Declare Integer array[5]
+   Declare Integer counter
+   Declare Integer total
+
+   For counter = 0 To 4 Step 1
+      Display "Enter number "
+      Input array[counter]
+   End For
+
+   Set total = total(array, 5)
+
+   For counter = 0 To 4 Step 1
+      Display "number ", array[counter]
+   End For
+
+   Display "Total is: ", total
+End Module
+
+Function Integer total(Integer A[], Integer size)
+   Declare Integer total = 0
+   Declare Integer counter
+   
+   For counter = 0 To size-1
+      Set total = A[counter] + total
+   End For
+
+   Return total
+End Function

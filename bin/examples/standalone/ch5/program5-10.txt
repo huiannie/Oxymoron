@@ -1,0 +1,10 @@
+// Declare a counter variable
+Declare Integer counter
+
+// Constant for the maximum value
+Constant Integer MAX_VALUE = 11
+
+// Display the odd numbers from 1 through 11.
+For counter = 1 To MAX_VALUE Step 2
+   Display counter
+End For

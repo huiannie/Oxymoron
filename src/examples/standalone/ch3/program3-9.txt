@@ -1,0 +1,24 @@
+Module main ()
+   Declare Integer number = 99
+
+   // Display the value stored in number.
+   Display "The number is ", number
+
+   // Call the changeMe module, passing
+   // the number variable as an argument.
+   Call changeMe(number)
+
+   // Display the value of the number again.
+   Display "The number is ", number
+End Module
+
+Module changeMe(Integer myValue)
+   Display "I am changing the value."
+
+   // Set the myValue parameter variable
+   // to 0.
+   Set myValue = 0
+
+   // Display the value in myValue.
+   Display "Now the number is ", myValue
+End Module

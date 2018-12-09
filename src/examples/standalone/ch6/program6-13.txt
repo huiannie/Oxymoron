@@ -1,0 +1,24 @@
+// Declare a variable to hold a string.
+Declare String str
+
+// Declare a variable to hold the number
+// of Ts in a string.
+Declare Integer numTs = 0
+
+// Declare a counter variable.
+Declare Integer counter
+
+// Get a sentence from the user.
+Display "Enter a string."
+Input str
+
+// Count the number of Ts in the string.
+For counter = 0 To length(str) - 1
+   If substring(str, counter, counter) == "T" Then
+      Set numTs = numTs + 1
+   End If
+End For
+
+// Display the number of Ts.
+Display "That string contains ", numTs
+Display "instances of the letter T."

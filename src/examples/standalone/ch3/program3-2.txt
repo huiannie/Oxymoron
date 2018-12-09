@@ -1,0 +1,62 @@
+Module main ()
+   // Display the starting message.
+   Call startingMessage()
+   Display "Press a key to see Step 1."
+   Input
+
+   // Display Step 1.
+   Call step1()
+   Display "Press a key to see Step 2."
+   Input
+
+   // Display Step 2.
+   Call step2()
+   Display "Press a key to see Step 3."
+   Input
+
+   // Display Step 3.
+   Call step3()
+   Display "Press a key to see Step 4."
+   Input
+
+   // Display Step 4.
+   Call step4()
+End Module
+
+// The startingMessage module displays
+// the program's starting message.
+Module startingMessage()
+   Display "This program tells you how to"
+   Display "disassemble an ACME laundry dryer."
+   Display "There are 4 steps in the process."
+End Module
+
+// The step1 module displays the instructions
+// for Step 1.
+Module step1()
+   Display "Step 1: Unplug the dryer and"
+   Display "move it away from the wall."
+End Module
+
+// The step2 module displays the instructions
+// for Step 2.
+Module step2()
+   Display "Step 2: Remove the six screws"
+   Display "from the back of the dryer."
+End Module
+
+// The step3 module displays the instructions
+// for Step 3.
+Module step3()
+   Display "Step 3: Remove the dryer's"
+   Display "back panel."
+End Module
+
+// The step4 module displays the instructions
+// for Step 4.
+Module step4()
+   Display "Step 4: Pull the top of the"
+   Display "dryer straight up."
+End Module
+
+

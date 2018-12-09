@@ -1,0 +1,32 @@
+Module main()
+   Declare Integer y1 = 10
+   Declare Integer y2 = 15
+   Declare Integer y3 = 20
+   
+   Declare A a
+   Declare B b
+   Declare C c
+   Declare D d
+   
+   
+   Display "Testing Class A now"
+   Set a = New A()
+   Call a.m3(1)
+   Display
+   
+   Display "Testing Class B now"
+   Set b = New B()
+   Call b.n3(1)
+   Display
+   
+   Display "Testing Class C now"
+   Set c = New C(1)
+   Call c.p3(1)
+   Display
+
+   Display "Testing Class D now"
+   Set d = New D(1)
+   Call d.p3(1)
+   Display
+
+End Module

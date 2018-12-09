@@ -1,0 +1,20 @@
+Module main()
+   // Declare a variable that can reference
+   // a CellPhone object.
+   Declare CellPhone myPhone
+   
+   // The following statement creates an object
+   // using the CellPhone class as its blueprint.
+   // The myPhone variable will reference the object.
+   Set myPhone = New CellPhone()
+   
+   // Store values in the object's fields.
+   Call myPhone.setManufacturer("Motorola")
+   Call myPhone.setModelNumber("M1000")
+   Call myPhone.setRetailPrice(199.99)
+   
+   // Display the values stored in the fields.
+   Display "The manufacturer is ", myPhone.getManufacturer()
+   Display "The model number is ", myPhone.getModelNumber()
+   Display "The retail price is ", myPhone.getRetailPrice()
+End Module

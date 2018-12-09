@@ -1,0 +1,29 @@
+// The following declares a global Integer variable.
+Declare Integer number
+Declare Integer a=1,b=2,c=3,d=4,e=5,f=6,g=7
+Declare Real k=1,m=2.1,n=3.2,r=4.5
+Declare String z="XYZ"
+
+// The main module
+Module main()
+   // Get a number from the user and store it
+   // in the global variable number.
+   Display "Enter a number."
+   Input number
+    
+   // Call the showNumber module.
+   Call showNumber()
+End Module
+
+// The showNumber module displays the contents
+// of the global variable number.
+Module showNumber()
+   Set a = b
+   Set a = c +   f
+   Set a = d-(9 + 9)
+   Set a = c *   f
+   Set k = (r - k) /k
+   Set k = c ^   r
+   
+   Display "The number you entered is ", number
+End Module

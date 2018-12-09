@@ -1,0 +1,8 @@
+Enter a test score.
+-89
+ERROR: The score cannot be less than 0 or greater than 100.
+Enter the correct score.
+102
+ERROR: The score cannot be less than 0 or greater than 100.
+Enter the correct score.
+65

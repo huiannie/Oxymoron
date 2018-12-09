@@ -1,0 +1,5 @@
+Declare Integer score
+Do
+   Display "Enter a test score."
+   Input score
+While score < 0 OR score > 100

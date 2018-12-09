@@ -1,0 +1,26 @@
+Module main()
+   // Declare and initialize some variables.
+   Declare Integer x = 99
+   Declare Integer y = 100
+   Declare Integer z = 101
+
+   // Display the values in those variables
+   Display "x is set to ", x
+   Display "y is set to ", y
+   Display "z is set to ", z
+
+   // Pass each variable to setToZero
+   Call setToZero(x)
+   Call setToZero(y)
+   Call setToZero(z)
+
+   // Display the values now.
+   Display "---------------"
+   Display "x is set to ", x
+   Display "y is set to ", y
+   Display "z is set to ", z
+End Module
+
+Module setToZero(Integer Ref value)
+   Set value = 0
+End Module

@@ -1,0 +1,5 @@
+Declare Integer age
+Display "What is your age?"
+Input age
+Display "Here is the value that you entered:"
+Display age

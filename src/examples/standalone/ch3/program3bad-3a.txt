@@ -1,0 +1,14 @@
+Module main ()
+   Call getTwoAges()
+End Module
+
+Module getTwoAges()
+   Declare Integer age
+   Display "Enter your age."
+   Input age
+   Declare Integer age
+   Display "Enter your pet's age."
+   Input age
+End Module
+
+

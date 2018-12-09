@@ -1,0 +1,35 @@
+Module main()
+   // A constant for the array size.
+   Constant Integer SIZE = 5
+
+   // An array initialized with values.
+   Declare Integer numbers[SIZE] = 2, 4, 6, 8, 10
+
+   // A variable to hold the sum of the elements.
+   Declare Integer sum
+   
+   // Get the sum of the elements.
+   Set sum = getTotal(numbers, SIZE)
+   
+   // Display the sum of the array elements.
+   Display "The sum of the array elements is ", sum
+End Module
+
+// The getTotal function accepts an Integer array and the
+// array's size as arguments. It returns the total of the 
+// array elements.
+Function Integer getTotal(Integer array[], Integer arraySize)
+   // Loop counter
+   Declare Integer index
+   
+   // Accumulator, initialized to 0
+   Declare Integer total = 0
+   
+   // Calculate the total of the array elements.
+   For index = 0 To arraySize - 1
+      Set total = total + array[index]
+   End For
+
+   // Return the total
+   Return total
+End Function

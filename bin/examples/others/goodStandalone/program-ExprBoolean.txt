@@ -1,0 +1,10 @@
+Display True AND False
+Display True AND True
+Display False AND True
+Display False AND False
+Display True OR False
+Display True OR True
+Display False OR True
+Display False OR False
+Display NOT True
+Display NOT False

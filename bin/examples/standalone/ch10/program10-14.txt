@@ -1,0 +1,85 @@
+Module main()
+   // Print the report header.
+   Call printHeader()
+   
+   // Print the details of the report.
+   Call printDetails()
+End Module
+
+// The printHeader module prints the report header.
+Module printHeader()
+   Print "Pinebrook Academy Fundraiser Report"
+   Print
+   Print "Student ID       Donation Amount"
+   Print "======================================"
+End Module
+
+// The printDetails module prints the report details.
+Module printDetails()
+   // Constant Sentinel
+   Constant Integer UNSET = -1
+
+   // Variables for the fields
+   Declare Integer studentID
+   Declare Real donation
+   
+   // Accumulator variables
+   Declare Real studentTotal = 0
+   Declare Real total = 0
+   
+   // A variable to use in the control
+   // break logic.
+   Declare Integer currentID = UNSET
+  
+   // A variable to detect end-of-file
+   Declare Boolean done
+   
+   // Declare an input file and open it.
+   Declare InputFile donationsFile
+   Open donationsFile "donations.dat"
+   
+   // Print the report details.
+   While NOT eof(donationsFile)
+      // Read the next record.
+      Read donationsFile studentID, donation
+      
+      If currentID == UNSET Then
+         // Save the student ID number.
+         Set currentID = studentID
+      Else If studentID != currentID Then
+         // Check the student ID field to see if
+         // it has changed.
+
+         // Print the total for the student,
+         // followed by a blank line.
+         Print "Total donations for student: ",
+               currencyFormat(studentTotal)
+         Print
+         
+         // Save the next student's ID number.
+         Set currentID = studentID
+         
+         // Reset the student accumulator.
+         Set studentTotal = 0
+      End If
+
+      // Print the data for the donation.
+      Print studentID, Tab, currencyFormat(donation)
+      
+      // Update the accumulators.
+      Set studentTotal = studentTotal + donation
+      Set total = total + donation
+   
+   End While
+   
+   // Print the total for the last student.
+   Print "Total donation for student: ",
+         currencyFormat(studentTotal)
+         
+   // Print the total of all donations.
+   Print "Total of all donations: ",
+         currencyFormat(total)
+
+   // Close the file.
+   Close donationsFile
+End Module

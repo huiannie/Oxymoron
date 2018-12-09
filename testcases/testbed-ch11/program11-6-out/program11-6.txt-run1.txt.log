@@ -1,0 +1,129 @@
+        Inventory Menu
+1. Add a record.
+2. Search for a record.
+3. Modify a record.
+4. Delete a record.
+5. Display a record.
+6. End the program.
+
+Enter your selection.
+5
+Description: Sumatra Dark Roast Quantity: 12.0 pounds.
+Description: Sumatra Medium Roast Quantity: 30.0 pounds.
+Description: Sumatra Decaf Quantity: 20.0 pounds.
+Description: Sumatra Organic Medium roast Quantity: 15.0 pounds.
+        Inventory Menu
+1. Add a record.
+2. Search for a record.
+3. Modify a record.
+4. Delete a record.
+5. Display a record.
+6. End the program.
+
+Enter your selection.
+2
+Enter a value to search for.
+Medium
+Description: Sumatra Medium Roast Quantity: 30.0 pounds.
+Description: Sumatra Organic Medium roast Quantity: 15.0 pounds.
+        Inventory Menu
+1. Add a record.
+2. Search for a record.
+3. Modify a record.
+4. Delete a record.
+5. Display a record.
+6. End the program.
+
+Enter your selection.
+1
+Enter the description.
+Local Flavor Decaf
+Enter the quantity on hand (in pounds).
+100
+Do you want to enter another record?
+(Enter Y for yes, or anything else for no.
+n
+
+Data appended to coffee.dat.
+        Inventory Menu
+1. Add a record.
+2. Search for a record.
+3. Modify a record.
+4. Delete a record.
+5. Display a record.
+6. End the program.
+
+Enter your selection.
+5
+Description: Sumatra Dark Roast Quantity: 12.0 pounds.
+Description: Sumatra Medium Roast Quantity: 30.0 pounds.
+Description: Sumatra Decaf Quantity: 20.0 pounds.
+Description: Sumatra Organic Medium roast Quantity: 15.0 pounds.
+Description: Local Flavor Decaf Quantity: 100.0 pounds.
+        Inventory Menu
+1. Add a record.
+2. Search for a record.
+3. Modify a record.
+4. Delete a record.
+5. Display a record.
+6. End the program.
+
+Enter your selection.
+3
+Enter the coffee you wish to update.
+Sumatra Decaf
+Enter the new quantity.
+60
+The record was updated.
+        Inventory Menu
+1. Add a record.
+2. Search for a record.
+3. Modify a record.
+4. Delete a record.
+5. Display a record.
+6. End the program.
+
+Enter your selection.
+5
+Description: Sumatra Dark Roast Quantity: 12.0 pounds.
+Description: Sumatra Medium Roast Quantity: 30.0 pounds.
+Description: Sumatra Decaf Quantity: 60.0 pounds.
+Description: Sumatra Organic Medium roast Quantity: 15.0 pounds.
+Description: Local Flavor Decaf Quantity: 100.0 pounds.
+        Inventory Menu
+1. Add a record.
+2. Search for a record.
+3. Modify a record.
+4. Delete a record.
+5. Display a record.
+6. End the program.
+
+Enter your selection.
+4
+Enter the coffee you wish to delete.
+Sumatra Dark Roast
+The file has been updated.
+        Inventory Menu
+1. Add a record.
+2. Search for a record.
+3. Modify a record.
+4. Delete a record.
+5. Display a record.
+6. End the program.
+
+Enter your selection.
+5
+Description: Sumatra Medium Roast Quantity: 30.0 pounds.
+Description: Sumatra Decaf Quantity: 60.0 pounds.
+Description: Sumatra Organic Medium roast Quantity: 15.0 pounds.
+Description: Local Flavor Decaf Quantity: 100.0 pounds.
+        Inventory Menu
+1. Add a record.
+2. Search for a record.
+3. Modify a record.
+4. Delete a record.
+5. Display a record.
+6. End the program.
+
+Enter your selection.
+6

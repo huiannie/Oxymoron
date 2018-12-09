@@ -1,0 +1,7 @@
+// Counter variable
+Declare Integer counter
+
+// This loop displays five random numbers
+For counter = 1 To 5
+   Display random(1, 100)
+End For

@@ -1,0 +1,10 @@
+This program determines whether a password
+meets the following requirements:
+(1) It must be at least 8 characters long.
+(2) It must contain at least one uppercase letter.
+(3) It must contain at least one lowercase letter.
+(4) It must contain at least one numeric digit.
+
+Enter a password.
+Love
+The password does not meet the requirements.

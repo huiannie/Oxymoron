@@ -1,0 +1,34 @@
+Module main()
+// Constants for the TV prices
+Constant Real MODEL_100_PRICE = 199.99
+Constant Real MODEL_200_PRICE = 269.99
+Constant Real MODEL_300_PRICE = 349.99
+
+// Constants for the TV sizes
+Constant Real MODEL_100_SIZE = 24
+Constant Real MODEL_200_SIZE = 27
+Constant Real MODEL_300_SIZE = 32
+
+// Variable for the model number
+Declare Integer modelNumber
+
+// Get the model number.
+Display "Which TV are you interested in?"
+Display "The 100, 200, or 300?"
+Input modelNumber
+
+// Display the price and size.
+Select modelNumber
+Case 100:
+Display "Price: $", MODEL_100_PRICE
+Display "Size: ", MODEL_100_SIZE
+Case 200:
+Display "Price: $", MODEL_200_PRICE
+Display "Size: ", MODEL_200_SIZE
+Case 300:
+Display "Price: $", MODEL_300_PRICE
+Display "Size: ", MODEL_300_SIZE
+Default:
+Display "Invalid model number"
+End Select
+End Module

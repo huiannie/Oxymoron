@@ -1,0 +1,19 @@
+// The following declares a global Integer variable.
+Declare Integer number
+
+// The main module
+Module main()
+   // Get a number from the user and store it
+   // in the global variable number.
+   Display "Enter a number."
+   Input number
+
+   // Call the showNumber module.
+   Call showNumber()
+End Module
+
+// The showNumber module displays the contents
+// of the global variable number.
+Module showNumber()
+   Display "The number you entered is ", number
+End Module

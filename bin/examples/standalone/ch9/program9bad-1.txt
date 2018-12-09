@@ -1,0 +1,31 @@
+Module bubbleSort(Integer Ref array[], Integer arraySize)
+   // The maxElement variable will contain the subscript
+   // of the last element in the array to compare.
+   Declare Integer maxElement
+   
+   // The index variable will be used as a counter
+   // in the inner loop.
+   Declare Integer index
+   
+   // The outer loop positions maxElement at the last
+   // element to compare during each pass through the
+   // array. Initially maxElement is the index of the
+   // last element in the array. During each iteration,
+   // it is decreased  one.
+   For maxElement = arraySize - 1 To 0 Step - 1
+      
+      // The inner loop steps through the array, comparing
+      // each element with its neighbor. All of the 
+      // elements from index 0 through maxElement are
+      // involved in the comparison. If two elements are
+      // out of order, they are swapped.
+      For index = 0 To maxElement - 1
+
+         // Compare an element with its neighbor and swap
+         // if necessary.
+         If array[index] > array[index + 1] Then
+            Call swap(array[index], array[index + 1])
+         End If
+      End For
+   End For
+End Module

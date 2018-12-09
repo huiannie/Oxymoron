@@ -1,0 +1,44 @@
+// Declare a constant for the array size.
+Constant Integer SIZE = 6
+
+// Declare a String array initialized with values.
+Declare String names[SIZE] = "Ava Fischer", "Chris Rich", 
+                             "Gordon Pike", "Matt Hoyle",
+                             "Rose Harrison", "Giovanni Ricci"
+
+// Declare a variable to hold the search value.
+Declare String searchValue
+
+// Declare a Boolean variable to act as a flag.
+Declare Boolean found
+
+// Declare a counter variable for the array
+Declare Integer index
+
+// The flag must initially be set to False.
+Set found = False
+
+// Set the counter variable to 0.
+Set index = 0
+
+// Get the string to search for.
+Display "Enter a name to search for in the array."
+Input searchValue
+
+// Step through the array searching for
+// the specified name.
+While found == False AND index <= SIZE  - 1
+   If contains(names[index], searchValue) Then
+      Set found = True
+   Else
+      Set index = index + 1
+   End If
+End While
+
+// Display the search results.
+If found Then
+   Display "That name matches the following element:"
+   Display names[index]
+Else
+   Display "That name was not found in the array."
+End If

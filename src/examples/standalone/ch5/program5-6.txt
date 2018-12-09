@@ -1,0 +1,33 @@
+Module main()
+   // Local variable
+   Declare String doAnother
+
+   Do
+      // Calculate and display a retail price
+      Call showRetail()
+
+      // Do this again?
+      Display "Do you have another item? (Enter y for yes.)"
+      Input doAnother
+   While doAnother == "y" OR doAnother == "Y"
+End Module
+
+// The showRetail module gets an item's wholesale cost
+// from the user and displays its retail price.
+Module showRetail()
+   // Local variables
+   Declare Real wholesale, retail
+
+   // Constant for the markup percentage
+   Constant Real MARKUP = 2.50
+
+   // Get the wholesale cost.
+   Display "Enter an item's wholesale cost."
+   Input wholesale
+
+   // Calculate the retail price.
+   Set retail = wholesale * MARKUP
+
+   // Display the retail price
+   Display "The retail price is $", retail
+End Module

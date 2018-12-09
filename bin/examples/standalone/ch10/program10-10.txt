@@ -1,0 +1,21 @@
+// Variables for the fields
+Declare String description
+Declare Real quantity
+
+// Declare an input file.
+Declare InputFile coffeeFile
+
+// Open the file.
+Open coffeeFile "coffee.dat"
+
+While NOT eof(coffeeFile)
+   // Read a record from the file.
+   Read coffeeFile description, quantity
+   
+   // Display the record.
+   Display "Description: ", description, 
+           " Quantity: ", quantity, " pounds."
+End While
+
+// Close the file.
+Close coffeeFile

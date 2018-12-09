@@ -1,0 +1,16 @@
+Declare String name
+Declare Integer value
+Declare Real temperature
+
+Display "Enter your name:"
+Input name
+
+Display "Enter a number:"
+Input value
+
+Display "Enter temperature:"
+Input temperature
+
+Display "Your name is: ", name
+Display "The number you entered is: ", value
+Display "The temperature is: ", temperature

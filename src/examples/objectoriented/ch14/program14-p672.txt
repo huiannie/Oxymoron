@@ -1,0 +1,56 @@
+Module main()
+
+   Constant Integer numberOfCustomers = 5
+   Declare Real taxRate = 0.05
+   
+   
+   Constant String dummy1 = "Cust"
+   Constant String dummy2 = "Address"
+
+   Declare String name[numberOfCustomers]
+   Declare String address[numberOfCustomers]
+   Declare String phone[numberOfCustomers]
+   Declare Integer index[numberOfCustomers]
+   
+   For index=0 To numberOfCustomers-1
+      Set name[index] =  append(dummy1, integerToString(index))
+      Set address[index] = append(dummy2, integerToString(index))
+      Set phone[index] = integerToString(random(1, 100))
+   End For
+
+   Declare Customer customer0, customer1, customer2, customer3, customer4
+   Set customer0 = New Customer(name[0], address[0], phone[0])
+   Set customer1 = New Customer(name[1], address[1], phone[1])
+   Set customer2 = New Customer(name[2], address[2], phone[2])
+   Set customer3 = New Customer(name[3], address[3], phone[3])
+   Set customer4 = New Customer(name[4], address[4], phone[4])
+   
+   
+   Declare ServiceQuote quote0, quote1, quote2, quote3
+   
+   Set quote0 = New ServiceQuote(random(1,100) * 10.0, random(1,100) * 4)
+   Set quote1 = New ServiceQuote(random(1,100) * 10.0, random(1,100) * 4)
+   Set quote2 = New ServiceQuote(random(1,100) * 10.0, random(1,100) * 4)
+   Set quote3 = New ServiceQuote(random(1,100) * 10.0, random(1,100) * 4)
+   
+   Display "Quote0: ", quote0.getPartsCharges(), ", ", quote0.getLaborCharges(), ", ", quote0.getTotalCharges(taxRate)
+   Display "Quote1: ", quote1.getPartsCharges(), ", ", quote1.getLaborCharges(), ", ", quote1.getTotalCharges(taxRate)
+   Display "Quote2: ", quote2.getPartsCharges(), ", ", quote2.getLaborCharges(), ", ", quote2.getTotalCharges(taxRate)
+   Display "Quote3: ", quote3.getPartsCharges(), ", ", quote3.getLaborCharges(), ", ", quote3.getTotalCharges(taxRate)
+   
+   Declare Real salesTax
+   Declare Real total
+   
+   Set salesTax = quote0.getSalesTax(taxRate) 
+                  + quote1.getSalesTax(taxRate) 
+                  + quote2.getSalesTax(taxRate) 
+                  + quote3.getSalesTax(taxRate)
+   Display "SalesTax = ", salesTax
+   
+   Set total = quote0.getTotalCharges(taxRate) 
+               + quote1.getTotalCharges(taxRate) 
+               + quote2.getTotalCharges(taxRate) 
+               + quote3.getTotalCharges(taxRate)
+   Display "Total = ", total
+   
+End Module

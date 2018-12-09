@@ -1,0 +1,8 @@
+Declare Integer age
+Declare String name
+Display "Enter your name."
+Input name
+Display "What is your age?"
+Input age
+Display "Hello ", name
+Display "You are ", age, " years old."

@@ -1,0 +1,14 @@
+Declare Integer hours=0, minutes=0, seconds=0
+Set hours = 0
+While hours <= 4
+   Set minutes = 0
+   While minutes <= 3
+      Set seconds = 0
+      While seconds <= 2
+         Display hours, ":", minutes, ":", seconds
+         Set seconds = seconds + 1
+      End While
+      Set minutes = minutes + 1
+   End While
+   Set hours = hours + 1
+End While

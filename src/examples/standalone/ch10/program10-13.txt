@@ -1,0 +1,46 @@
+// Variables for the fields
+Declare String description
+Declare Real quantity
+
+// A variable to hold the search value.
+Declare String searchValue
+
+// Declare an input file.
+Declare InputFile coffeeFile
+
+// Declare an output file to copy the original
+// file to.
+Declare OutputFile tempFile
+
+// Open the files.
+Open coffeeFile "coffee.dat"
+Open tempFile "temp.dat"
+
+// Get the value to search for.
+Display "Enter the coffee you wish to delete."
+Input searchValue
+
+While NOT eof(coffeeFile)
+   // Read a record from the file.
+   Read coffeeFile description, quantity
+   
+   // If this is not the record to delete, then
+   // write it to the temporary file.
+   If description != searchValue Then   
+      Write tempFile description, quantity
+   End If
+End While
+
+// Close the original file.
+Close coffeeFile
+
+// Close the temporary file.
+Close tempFile
+
+// Delete the original file.
+Delete "coffee.dat"
+
+// Rename the temporary file.
+Rename "temp.dat", "coffee.dat"
+
+Display "The file has been updated."

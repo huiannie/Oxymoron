@@ -1,0 +1,9 @@
+Declare String str = "12"
+Declare Integer intNumber
+
+If isInteger(str) Then
+   Set intNumber = stringToInteger(str)
+   Display intNumber
+Else
+   Display "Invalid data"
+End If

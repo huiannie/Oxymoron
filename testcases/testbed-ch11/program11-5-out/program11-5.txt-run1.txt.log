@@ -1,0 +1,29 @@
+1. Convert inches to centimeters.
+2. Convert feet to meters.
+3. Convert miles to kilometers.
+4. End the program.
+
+Enter your selection.
+1
+Enter the number of inches.
+10
+That is equal to 25.4 centimeters.
+
+1. Convert inches to centimeters.
+2. Convert feet to meters.
+3. Convert miles to kilometers.
+4. End the program.
+
+Enter your selection.
+2
+Enter the number of feet.
+10
+That is equal to 3.048 meters.
+
+1. Convert inches to centimeters.
+2. Convert feet to meters.
+3. Convert miles to kilometers.
+4. End the program.
+
+Enter your selection.
+4

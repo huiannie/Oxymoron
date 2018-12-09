@@ -1,0 +1,32 @@
+// Declare an output file.
+Declare OutputFile videoFile
+
+// A variable to hold the number of videos.
+Declare Integer numVideos
+
+// A variable to hold a video's running time.
+Declare Real runningTime
+
+// Counter variable for the loop
+Declare Integer counter
+
+// Get the number of videos.
+Display "Enter the number of videos in the project."
+Input numVideos
+
+// Open an output file to save the running times.
+Open videoFile "video_times.dat"
+
+// Write each video's running times to the file.
+For counter = 1 To numVideos
+   //Get the running time.
+   Display "Enter the running time for video #", counter
+   Input runningTime
+   
+   // Write the running time to the file.
+   Write videoFile runningTime
+End For
+
+// Close the file.
+Close videoFile
+Display "The times have been saved to video_times.dat"

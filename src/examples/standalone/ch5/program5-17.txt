@@ -1,0 +1,13 @@
+// Declare a counter variable
+Declare Integer counter = 10
+
+// Constant for the minimum value
+Constant Integer MIN_VALUE = 1
+
+// Display a count-down.
+Display "And the countdown begins..."
+While counter >= MIN_VALUE
+   Display counter
+   Set counter = counter - 1
+End While
+Display "Blast off!"

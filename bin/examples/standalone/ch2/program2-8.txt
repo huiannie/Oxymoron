@@ -1,0 +1,5 @@
+Declare Real excessMinutes, overageFee
+Display "Enter the number of excess minutes."
+Input excessMinutes
+Set overageFee = excessMinutes * 0.35
+Display "Your current overage fee is $", overageFee

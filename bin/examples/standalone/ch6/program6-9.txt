@@ -1,0 +1,11 @@
+// Variable declarations
+Declare Integer number
+Declare Real squareRoot
+
+// Get a number.
+Display "Enter a number."
+Input number
+
+// Calculate and display its square root.
+Set squareRoot = sqrt(number)
+Display "The square root of that number is ", squareRoot

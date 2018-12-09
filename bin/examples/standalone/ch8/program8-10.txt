@@ -1,0 +1,25 @@
+// Declare a constant for the array size.
+Constant Integer SIZE = 5
+
+// Declare an array initialized with values.
+Declare Real numbers[SIZE] = 2.5, 8.3, 6.5, 4.0, 5.2
+
+// Declare and initialize an accumulator variable.
+Declare Real total = 0
+
+// Declare a variable to hold the average.
+Declare Real average
+
+// Declare a counter variable for the loop.
+Declare Integer index
+
+// Calculate the total of the array elements.
+For index = 0 To SIZE - 1
+   Set total = total + numbers[index]
+End For
+
+// Calculate the average of the array elements.
+Set average = total / SIZE
+
+// Display the sum of the array elements.
+Display "The average of the array elements is ", average

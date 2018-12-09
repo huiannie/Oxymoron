@@ -1,0 +1,85 @@
+Module main()
+   // Constant for the array size
+   Constant Integer SIZE = 6
+   
+   // An array of strings
+   Declare Integer numbers[SIZE] = 4, 6, 1, 3, 5, 2
+   
+   // Loop counter
+   Declare Integer index
+
+   // Display the array in its original order.
+   Display "Original order:"
+   For index = 0 To SIZE - 1
+      Display numbers[index]
+   End For
+   
+   // Sort the numbers.
+   Call selectionSort(numbers, SIZE)
+   
+   // Display a blank line.
+   Display
+   
+   // Display the sorted array.
+   Display "Sorted order:"
+   For index = 0 To SIZE - 1
+      Display numbers[index]
+   End For
+End Module
+
+// The selectionSort module accepts an array of integers
+// and the array's size as arguments. When the module
+// is finished, the values in the array will be sorted
+// in ascending order.
+Module selectionSort(Integer Ref array[], Integer arraySize)
+   // startScan will hold the starting position of the scan.
+   Declare Integer startScan
+   
+   // minIndex will hold the subscript of the element with
+   // the smallest value found in the scanned area.
+   Declare Integer minIndex
+   
+   // minValue will hold the smallest value found in the
+   // scanned area.
+   Declare Integer minValue
+   
+   // index is a counter variable used to hold a subscript.
+   Declare Integer index
+   
+   // The outer loop iterates once for each element in the
+   // array, except the last element. The startScan variable
+   // marks the position where the scan should begin.
+   For startScan = 0 To arraySize - 2
+   
+      // Assume the first element in the scannable are
+      // is the smallest value.
+      Set minIndex = startScan
+      Set minValue = array[startScan]
+   
+      // Scan the array, starting at the 2nd element in
+      // the scannable area. We are looking for the smallest
+      // value in the scannable area.
+      For index = startScan + 1 To arraySize - 1
+         If array[index] < minValue Then
+            Set minValue = array[index]
+            Set minIndex = index
+         End If
+      End For
+   
+      // Swap the element with the smallest value
+      // with the first element in the scannable area.
+      Call swap(array[minIndex], array[startScan])
+   End For
+End Module
+
+// The swap module accepts two Integer arguments
+// and swaps their contents.
+Module swap(Integer Ref a, Integer Ref b)
+   // Local variable for temporary storage.
+   Declare Integer temp
+   
+   // Swap the values in a and b.
+   Set temp = a
+   Set a = b
+   Set b = temp
+End Module

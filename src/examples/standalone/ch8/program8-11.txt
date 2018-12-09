@@ -1,0 +1,27 @@
+// Declare a constant for the array size.
+Constant Integer SIZE = 5
+
+// Declare an array initialized with values.
+Declare Integer numbers[SIZE] = 8, 1, 12, 6, 2
+
+// Declare a counter variable for the array.
+Declare Integer index
+
+// Declare a variable to hold the highest value.
+Declare Integer highest
+
+// Assign the first element to highest.
+Set highest = numbers[0]
+
+// Step through the rest of the array,
+// beginning at element 1. When a value
+// greater than highest is found, assign
+// that value to highest.
+For index = 0 To SIZE - 1
+   If numbers[index] > highest Then
+      Set highest = numbers[index]
+   End If
+End For
+
+// Display the highest value.
+Display "The highest value in the array is ", highest

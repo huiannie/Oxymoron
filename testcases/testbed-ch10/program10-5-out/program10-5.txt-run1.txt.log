@@ -1,0 +1,15 @@
+Enter the number of videos in the project.
+6
+Enter the running time for video #1
+24.5
+Enter the running time for video #2
+12.2
+Enter the running time for video #3
+14.6
+Enter the running time for video #4
+20.4
+Enter the running time for video #5
+22.5
+Enter the running time for video #6
+19.3
+The times have been saved to video_times.dat

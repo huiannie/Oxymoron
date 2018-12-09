@@ -1,0 +1,31 @@
+Class CellPhone
+   // Field declarations
+   Private String manufacturer
+   Private String modelNumber
+   Private Real retailPrice
+   
+   // Method definitions
+   Public Module setManufacturer(String manufact)
+      Set manufacturer = manufact
+   End Module
+   
+   Public Module setModelNumber(String modNum)
+      Set modelNumber = modNum
+   End Module
+
+   Public Module setRetailPrice(Real retail)
+      Set retailPrice = retail
+   End Module
+   
+   Public Function String getManufacturer()
+      Return manufacturer
+   End Function
+
+   Public Function String getModelNumber()
+      Return modelNumber
+   End Function
+
+   Public Function Real getRetailPrice()
+      Return retailPrice
+   End Function
+End Class

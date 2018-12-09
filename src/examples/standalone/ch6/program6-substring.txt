@@ -1,0 +1,4 @@
+Declare String str = "New York City"
+Declare String search
+Set search = substring(str, 5, 7)
+Display search

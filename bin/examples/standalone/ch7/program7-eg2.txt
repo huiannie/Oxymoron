@@ -1,0 +1,11 @@
+Declare Real score
+// Get a test score.
+Display "Enter a test score."
+Input score
+
+// Validate the test score.
+While score < 0 OR score > 100
+   Display "ERROR: The score cannot be less than 0 or greater than 100."
+   Display "Enter the correct score."
+   Input score
+End While

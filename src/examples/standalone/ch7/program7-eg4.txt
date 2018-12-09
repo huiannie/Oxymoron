@@ -1,0 +1,11 @@
+Declare Integer model
+
+// Get the model number.
+Display "Enter the model number."
+Input model
+
+While model != 100 AND model != 200 AND model != 300
+   Display "The valid model numbers are 100, 200, and 300."
+   Display "Enter a valid model number."
+   Input model
+End While

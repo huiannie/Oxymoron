@@ -1,0 +1,22 @@
+// Declare the variables
+Declare Real fiveYears
+Declare Real sevenYears
+Declare Real tenYears
+
+// Create a constant for the yearly rise
+Constant Real YEARLY_RISE = 1.5
+
+// Display the amount of rise in five years
+Set fiveYears = YEARLY_RISE * 5
+Display "The ocean levels will rise ", fiveYears,
+        " millimeters in five years."
+
+// Display the amount of rise in seven years
+Set sevenYears = YEARLY_RISE * 7
+Display "The ocean levels will rise ", sevenYears,
+        " millimeters in seven years."
+
+// Display the amount of rise in ten years
+Set tenYears = YEARLY_RISE * 10
+Display "The ocean levels will rise ", tenYears,
+        " millimeters in ten years."

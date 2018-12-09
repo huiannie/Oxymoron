@@ -1,0 +1,288 @@
+Module main()
+   // Variable to hold the menu selection.
+   Declare Integer menuSelection
+
+   Do
+      // Display the menu.
+      Call displayMenu(menuSelection)
+ 
+      // Perform the selected operation.
+      Select menuSelection
+         Case 1:
+            Call addRecord()
+         
+         Case 2:
+            Call searchRecord()
+      
+         Case 3:
+            Call modifyRecord()
+
+         Case 4:
+            Call deleteRecord()
+
+         Case 5:
+            Call displayRecords()
+      End Select   
+   While menuSelection != 6
+End Module
+
+// The displayMenu module displays the menu, gets
+// the user's selection, and validates it.
+Module displayMenu(Integer Ref selection)
+   // Display the menu.
+   Display "        Inventory Menu"
+   Display "1. Add a record."
+   Display "2. Search for a record."
+   Display "3. Modify a record."
+   Display "4. Delete a record."
+   Display "5. Display a record."
+   Display "6. End the program."
+   Display
+
+   // Get the user's selection
+   Display "Enter your selection."
+   Input selection
+
+   // Validate the menu selection.
+   While selection < 1 OR selection > 6
+      Display "That is an invalid selection. ",
+              "Enter 1, 2, 3, 4, 5 or 6."
+      Input selection
+   End While
+End Module
+
+// The addRecord module lets the user add a record
+// to the inventory file.
+Module addRecord()
+   // Variables for the fields
+   Declare String description
+   Declare Real quantity
+   
+   // Variable to control the loop
+   Declare String another = "Y"
+   
+   // Declare an output file in append mode.
+   Declare OutputFile AppendMode coffeeFile
+   
+   // Open the file.
+   Open coffeeFile "coffee.dat"
+   
+   While toUpper(another) == "Y"
+      // Get the description
+      Display "Enter the description."
+      Input description
+      
+      // Get the quantity on hand.
+      Display "Enter the quantity on hand ",
+              "(in pounds)."
+      Input quantity
+
+      // Append the record to the file.
+      Write coffeeFile description, quantity
+      
+      // Determine whether the user wants to enter
+      // another record.
+      Display "Do you want to enter another record?"
+      Display "(Enter Y for yes, or anything else for no."
+      Input another
+      
+      // Display a blank line.
+      Display
+   End While
+   
+   // Close the file.
+   Close coffeeFile
+   Display "Data appended to coffee.dat."
+End Module
+
+// The searchRecord module allows the user to
+// search for a record in the inventory file.
+Module searchRecord()
+   // Variables for the fields
+   Declare String description
+   Declare Real quantity
+
+   // Variable to hold the search value.
+   Declare String searchValue
+
+   // Flag to indicate whether the value was found.
+   Declare Boolean found = False
+
+   // Declare an input file.
+   Declare InputFile coffeeFile
+
+   // Get the value to search for.
+   Display "Enter a value to search for."
+   Input searchValue
+
+   // Open the file.
+   Open coffeeFile "coffee.dat"
+
+   While NOT eof(coffeeFile)
+      // Read a record from the file.
+      Read coffeeFile description, quantity
+   
+      // If the record contains the search value,
+      // then display it.
+      If contains(description, searchValue) Then   
+         // Display the record.
+         Display "Description: ", description, 
+                 " Quantity: ", quantity, " pounds."
+
+         // Set the found flag to true
+         Set found = True
+      End If
+   End While
+
+   // If the value was not found in the file,
+   // display a message indicating so.
+   If NOT found Then
+      Display searchValue, " was not found."
+   End If
+
+   // Close the file.
+   Close coffeeFile
+End Module
+
+// The modifyRecord module allows the user to modify
+// an existing record in the inventory file.
+Module modifyRecord()
+   // Variables for the fields
+   Declare String description
+   Declare Real quantity
+
+   // Variable to hold the search value.
+   Declare String searchValue
+
+   // Variable to hold the new quantity.
+   Declare Real newQuantity
+
+   // Flag to indicate whether the value was found.
+   Declare Boolean found = False
+
+   // Declare an input file.
+   Declare InputFile coffeeFile
+
+   // Declare an output file to copy the original
+   // file to.
+   Declare OutputFile tempFile
+
+   // Open the files.
+   Open coffeeFile "coffee.dat"
+   Open tempFile "temp.dat"
+
+   // Get the value to search for.
+   Display "Enter the coffee you wish to update."
+   Input searchValue
+
+   // Get the new quantity.
+   Display "Enter the new quantity."
+   Input newQuantity
+
+   While NOT eof(coffeeFile)
+      // Read a record from the file.
+      Read coffeeFile description, quantity
+   
+      // Write either this record to the temporary
+      // file, or the new record if this is the
+      // one that is to be change.
+      If description == searchValue Then   
+         Write tempFile description, newQuantity
+         Set found = True
+      Else
+         Write tempFile description, quantity
+      End If
+   End While
+
+   // Close the two files.
+   Close coffeeFile
+   Close tempFile
+
+   // Delete the original file.
+   Delete "coffee.dat"
+
+   // Rename the temporary file.
+   Rename "temp.dat", "coffee.dat"
+
+   // Indicate whether the operation was successful.
+   If found Then
+      Display "The record was updated."
+   Else
+      Display searchValue, " was not found in the file."
+   End If
+End Module
+
+// The deleteRecord module allows the user to delete
+// a record from the inventory file.
+Module deleteRecord()
+   // Variables for the fields
+   Declare String description
+   Declare Real quantity
+
+   // Variable to hold the search value.
+    Declare String searchValue
+
+   // Declare an input file.
+   Declare InputFile coffeeFile
+
+   // Declare an output file to copy the original
+   // file to.
+   Declare OutputFile tempFile
+
+   // Open the files.
+   Open coffeeFile "coffee.dat"
+   Open tempFile "temp.dat"
+
+   // Get the value to search for.
+   Display "Enter the coffee you wish to delete."
+   Input searchValue
+
+   While NOT eof(coffeeFile)
+      // Read a record from the file.
+      Read coffeeFile description, quantity
+   
+      // If this is not the record to delete, then
+      // write it to the temporary file.
+      If description != searchValue Then   
+         Write tempFile description, quantity
+      End If
+   End While
+
+   // Close the two files.
+   Close coffeeFile
+   Close tempFile
+
+   // Delete the original file.
+   Delete "coffee.dat"
+
+   // Rename the temporary file.
+   Rename "temp.dat", "coffee.dat"
+
+   Display "The file has been updated."
+End Module
+
+// The displayRecords module displays all
+// of the records in the inventory file.
+Module displayRecords()
+   // Variables for the fields
+   Declare String description
+   Declare Real quantity
+
+   // Declare an input file.
+   Declare InputFile coffeeFile
+
+   // Open the file.
+   Open coffeeFile "coffee.dat"
+
+   While NOT eof(coffeeFile)
+      // Read a record from the file.
+      Read coffeeFile description, quantity
+   
+      // Display the record.
+      Display "Description: ", description, 
+              " Quantity: ", quantity, " pounds."
+   End While
+
+   // Close the file.
+   Close coffeeFile
+End Module

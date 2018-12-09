@@ -1,0 +1,35 @@
+// Constant for the array size.
+Constant Integer SIZE = 10
+
+// Declare an array to hold tests scores.
+Declare Integer scores[SIZE] = 87, 75, 98, 100, 82,
+                               72, 88, 92, 60, 78
+
+// Declare a Boolean variable to act as a flag.
+Declare Boolean found
+
+// Declare a variable to use as a loop counter.
+Declare Integer index
+
+// The flag must initially be set to False.
+Set found = False
+
+// Set the counter variable to 0.
+Set index = 0
+
+// Step through the array searching for a 
+// score equal to 100.
+While found == False AND index <= SIZE - 1
+   If scores[index] == 100 Then
+      Set found = True
+   Else
+      Set index = index + 1
+   End If
+End While
+
+// Display the search results.
+If found Then
+   Display "You earned 100 on test number ", index + 1
+Else
+   Display "You did not earn 100 on any test."
+End If

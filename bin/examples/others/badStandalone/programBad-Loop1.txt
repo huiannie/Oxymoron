@@ -1,0 +1,10 @@
+While Y
+   Display Y
+   Do
+      Display A
+      While X
+         Display X
+      End While
+   Until Y
+   While Z
+End While

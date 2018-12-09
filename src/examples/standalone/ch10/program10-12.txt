@@ -1,0 +1,67 @@
+// Variables for the fields
+Declare String description
+Declare Real quantity
+
+// A variable to hold the search value.
+Declare String searchValue
+
+// A variable to hold the new quantity.
+Declare Real newQuantity
+
+// A Flag to indicate whether the value was found.
+Declare Boolean found = False
+
+// Declare an input file.
+Declare InputFile coffeeFile
+
+// Declare an output file to copy the original
+// file to.
+Declare OutputFile tempFile
+
+// Open the original file.
+Open coffeeFile "coffee.dat"
+
+// Open the temporary file.
+Open tempFile "temp.dat"
+
+// Get the value to search for.
+Display "Enter the coffee you wish to update."
+Input searchValue
+
+// Get the new quantity.
+Display "Enter the new quantity."
+Input newQuantity
+
+While NOT eof(coffeeFile)
+   // Read a record from the file.
+   Read coffeeFile description, quantity
+   
+   // Write either this record to the temporary
+   // file, or the new record if this is the
+   // one that is to be change.
+   If description == searchValue Then   
+      Write tempFile description, newQuantity
+      Set found = True
+   Else
+      Write tempFile description, quantity
+   End If
+End While
+
+// Close the original file.
+Close coffeeFile
+
+// Close the temporary file.
+Close tempFile
+
+// Delete the original file.
+Delete "coffee.dat"
+
+// Rename the temporary file.
+Rename "temp.dat", "coffee.dat"
+
+// Indicate whether the operation was successful.
+If found Then
+   Display "The record was updated."
+Else
+   Display searchValue, " was not found in the file."
+End If

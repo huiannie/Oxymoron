@@ -1,0 +1,39 @@
+// This program averages test scores. It asks the user for the
+// number of students and the number of test scores per student.
+Declare Integer numStudents
+Declare Integer numTestScores
+Declare Real total
+Declare Integer student
+Declare Integer testNum
+Declare Real score
+Declare Real average
+
+// Get the number of students.
+Display "How many students do you have?"
+Input numStudents
+
+// Get the number of test scores per student.
+Display "How many test scores per student?"
+Input numTestScores
+
+// Determine each student's average test score.
+For student = 1 To numStudents
+   // Initialize an accumulator for test scores.
+   Set total = 0
+   
+   // Get a student's test scores.
+   Display "Student number ", student
+   Display "-----------------"
+   For testNum = 1 To numTestScores
+      Display "Enter test number ", testNum, ":"
+      Input score
+      Set total = total + score
+   End For
+   
+   // Calculate the average test score for this student.
+   Set average = total / numTestScores
+   
+   // Display the average.
+   Display "The average for student ", student, " is ", average
+   Display
+End For

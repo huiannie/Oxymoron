@@ -1,0 +1,10 @@
+// Declare an Integer array with 10 elements.
+Declare Integer series[10]
+
+// Declare a variable to use in the loop.
+Declare Integer index
+
+// Set each array element to 100.
+For index = 0 To 9
+   Set series[index] = 100
+End For

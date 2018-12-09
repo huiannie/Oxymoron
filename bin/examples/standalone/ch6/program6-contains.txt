@@ -1,0 +1,7 @@
+Declare String string1 = "four score and seven years ago"
+Declare String string2 = "seven"
+If contains(string1, string2) Then
+   Display string2, " appears in the string."
+Else
+   Display string2, " does not appear in the string."
+End If

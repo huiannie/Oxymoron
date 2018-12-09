@@ -1,0 +1,6 @@
+Declare Integer intNumber
+Declare String str = "-90"
+Set intNumber = stringToInteger("65")
+Display intNumber
+Set intNumber = stringToInteger(str)
+Display intNumber

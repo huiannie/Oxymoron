@@ -1,0 +1,34 @@
+How many students do you have?
+3
+How many test scores per student?
+3
+Student number 1
+-----------------
+Enter test number 1:
+100
+Enter test number 2:
+95
+Enter test number 3:
+90
+The average for student 1 is 95.0
+
+Student number 2
+-----------------
+Enter test number 1:
+80
+Enter test number 2:
+81
+Enter test number 3:
+82
+The average for student 2 is 81.0
+
+Student number 3
+-----------------
+Enter test number 1:
+75
+Enter test number 2:
+85
+Enter test number 3:
+80
+The average for student 3 is 80.0
+

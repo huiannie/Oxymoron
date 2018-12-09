@@ -1,0 +1,37 @@
+Module main()
+   // Local variable
+   Declare String keepGoing = "y"
+
+   // Calculate as many commissions
+   // as needed.
+   While keepGoing == "y"
+      // Display a salesperson's commission
+      Call showCommission()
+
+      // Do it again?
+      Display "Do you want to calculate another"
+      Display "commission? (Enter y for yes.)"
+      Input keepGoing
+   End While
+End Module
+
+// The showCommission module gets the
+// amount of sales and displays the
+// commission.
+Module showCommission()
+   // Local variables
+   Declare Real sales, commission
+
+   // Constant for the commission rate
+   Constant Real COMMISSION_RATE = 0.10
+
+   // Get the amount of sales.
+   Display "Enter the amount of sales."
+   Input sales
+
+   // Calculate the commission.
+   Set commission = sales * COMMISSION_RATE
+
+   // Display the commission
+   Display "The commission is $", commission
+End Module

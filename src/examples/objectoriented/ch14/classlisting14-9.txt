@@ -1,0 +1,37 @@
+Class FinalExam Extends GradedActivity
+   // Fields
+   Private Integer numQuestions
+   Private Real pointsEach
+   Private Integer numMissed
+   
+   // The constructor sets the number of
+   // questions on the exam and the number
+   // of questions missed.
+   Public Module FinalExam(Integer questions,
+                           Integer missed)
+      // Local variable to hold the numeric score.
+      Declare Real numericScore
+      
+      // Set the numQuestions and numMissed fields.
+      Set numQuestions = questions
+      Set numMissed = missed
+      
+      // Calculate the points for each question
+      // and the numeric score for this exam.
+      Set pointsEach = 100.0 / questions
+      Set numericScore = 100.0 - (missed * pointsEach)
+      
+      // Call the inherited setScore method to
+      // set the numeric score.
+      Call setScore(numericScore)
+   End Module
+   
+   // Accessors
+   Public Function Real getPointsEach()
+      Return pointsEach
+   End Function
+   
+   Public Function Integer getNumMissed()
+      Return numMissed
+   End Function
+End Class   

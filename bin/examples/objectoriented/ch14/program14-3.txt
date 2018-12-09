@@ -1,0 +1,26 @@
+Module main()
+   // Variables to hold data entered by the user.
+   Declare String manufacturer, model
+   Declare Real retail
+
+   // Declare a variable that can reference
+   // a CellPhone object.
+   Declare CellPhone myPhone
+   
+   // Get the data for a cell phone from the user.
+   Display "Enter the phone's manufacturer."
+   Input manufacturer
+   Display "Enter the phone's model number."
+   Input model
+   Display "Enter the phone's retail price."
+   Input retail
+
+   // Create a CellPhone object initialized with the
+   // data entered by the user.
+   Set myPhone = New CellPhone(manufacturer, model, retail)
+   
+   // Display the values stored in the fields.
+   Display "The manufacturer is ", myPhone.getManufacturer()
+   Display "The model number is ", myPhone.getModelNumber()
+   Display "The retail price is ", myPhone.getRetailPrice()
+End Module

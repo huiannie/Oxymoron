@@ -1,0 +1,96 @@
+Module main()
+   // Constant for the minimum password length
+   Constant Integer MIN_LENGTH = 8
+   
+   // Local variable to hold the user's password
+   Declare String password
+
+   // Display some information about the program.
+   Display "This program determines whether a password"
+   Display "meets the following requirements:"
+   Display "(1) It must be at least 8 characters long."
+   Display "(2) It must contain at least one uppercase letter."
+   Display "(3) It must contain at least one lowercase letter."
+   Display "(4) It must contain at least one numeric digit."
+   Display   
+   
+   // Get a password from the user.
+   Display "Enter a password."
+   Input password
+   
+   // Validate the password
+   If length(password) >= MIN_LENGTH AND
+      numberUpperCase(password) >= 1 AND
+      numberLowerCase(password) >= 1 AND
+      numberDigits(password) >= 1 Then
+      Display "The password is valid."
+   Else
+      Display "The password does not meet the requirements."
+   End If
+End Module
+
+// The numberUpperCase function accepts a string
+// argument and returns the number of uppercase
+// letters it contains.
+Function Integer numberUpperCase(String str)
+   // Variable to hold the number of uppercase letters
+   Declare Integer count = 0
+      
+   // Variable to use stepping through str
+   Declare Integer index
+
+   // Step through str counting the number
+   // of uppercase letters.
+   For index = 0 To length(str) - 1
+      If isUpper(str[index]) Then
+         Set count = count + 1
+      End If
+   End For
+
+   // Return the number of uppercase letters.
+   Return count
+End Function
+
+// The numberLowerCase function accepts a string
+// argument and returns the number of lowercase
+// letters it contains.
+Function Integer numberLowerCase(String str)
+   // Variable to hold the number of lowercase letters
+   Declare Integer count = 0
+      
+   // Variable to use stepping through str
+   Declare Integer index
+
+   // Step through str counting the number
+   // of lowercase letters.
+   For index = 0 To length(str) - 1
+      If isLower(str[index]) Then
+         Set count = count + 1
+      End If
+   End For
+
+   // Return the number of lowercase letters.
+   Return count
+End Function
+
+// The numberDigits function accepts a string
+// argument and returns the number of numeric
+// digits it contains.
+Function Integer numberDigits(String str)
+   // Variable to hold the number of digits
+   Declare Integer count = 0
+      
+   // Variable to use stepping through str
+   Declare Integer index
+
+   // Step through str counting the number
+   // of digits.
+   For index = 0 To length(str) - 1
+      If isDigit(str[index]) Then
+         Set count = count + 1
+      End If
+   End For
+
+   // Return the number of digits.
+   Return count
+End Function

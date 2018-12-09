@@ -1,0 +1,23 @@
+// Variable to hold the temperature
+Declare Real temperature
+
+// Constant for the maximum temperature
+Constant Real MAX_TEMP = 102.5
+
+// Get the substance's temperature.
+Display "Enter the substance's temperature."
+Input temperature
+
+// If necessary, adjust the thermostat.
+While temperature > MAX_TEMP
+   Display "The temperature is too high."
+   Display "Turn the thermostat down and wait"
+   Display "five minutes. Take the temperature"
+   Display "again and enter it here."
+   Input temperature
+End While
+
+// Remind the user to check the temperature
+// again in 15 minutes.
+Display "The temperature is acceptable."
+Display "Check it again in 15 minutes."

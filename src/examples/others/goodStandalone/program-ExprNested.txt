@@ -1,0 +1,16 @@
+Declare String a="a", b="b", c=".", d
+Declare Real e
+
+Display a, "Expected a"
+Display substring(a, 0, length(a)-1), "    Expected=a"
+Display substring(a, 0, length(a)-1), toUpper(b), "    Expected=aB"
+Display append(substring(a, 0, length(a)-1), toUpper(b)), "    Expected=aB"
+Display append(append(substring(a, 0, length(a)-1), toUpper(b)), c), "    Expected=aB."
+Display contains(append(append(substring(a, 0, length(a)-1), toUpper(b)), c), a), "   Expected=True"
+Display length(append(append(substring(a, 0, length(a)-1), toUpper(b)), c)) + 1, "    Expected=4"
+Display (length(append(append(substring(a, 0, length(a)-1), toUpper(b)), c)) + 1) ^ 2, "    Expected=16"
+Set d = append(append(substring(a, 0, length(a)-1), toUpper(b)), c)
+Set e = (length(append(append(substring(a, 0, length(a)-1), toUpper(b)), c)) + 1) ^ 2 
+Display "d is: ", d
+Display "e is: ", e
+Display length(d) - toInteger(e)

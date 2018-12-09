@@ -1,0 +1,19 @@
+
+Module main()
+   Declare Integer a, b, c, d, e, f, g
+   Declare Real u, v, w, x, y, z
+   
+
+
+   Display "The sum of 12 and 45 is:"
+
+   Display "A is:", a, " B is:", b,
+            "C is: ", c
+
+   Display "E=", e, " F=", f, "G=", g
+
+   Display "U=", u, "V =", 
+      v, "W=", 
+      w
+
+   End  Module

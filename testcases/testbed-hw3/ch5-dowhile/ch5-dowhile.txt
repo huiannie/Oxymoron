@@ -1,0 +1,16 @@
+Declare Real x=0, y=0
+Declare String response = "no"
+Declare Real sum
+
+Do 
+   Display "Please enter x:"
+   Input x
+   Display "Please enter y:"
+   Input y 
+
+   Set sum = x + y
+   Display "Sum is ", sum
+
+   Display "Do you want to do it again?"
+   Input response
+While response == "yes"

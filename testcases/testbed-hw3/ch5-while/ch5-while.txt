@@ -1,0 +1,8 @@
+Declare Integer product = 0
+Declare Integer x
+
+While product < 100
+   Display "Enter a number:"
+   Input x
+   Set product = x * 10
+End While

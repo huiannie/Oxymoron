@@ -1,0 +1,17 @@
+// Variables to hold the hours worked, the
+// hourly pay rate, and the gross pay.
+Declare Real hours, payRate, grossPay
+
+// Get the number of hours worked.
+Display "Enter the number of hours worked."
+Input hours
+
+// Get the hourly pay rate.
+Display "Enter the hourly pay rate."
+Input payRate
+
+// Calculate the gross pay.
+Set grossPay = hours * payRate
+
+// Display the gross pay.
+Display "The gross pay is ", currencyFormat(grossPay)

@@ -1,0 +1,13 @@
+This program displays numbers and
+their squares. What number should
+I start with?
+3
+What number should I end with?
+7
+Number	Square
+-----------------------
+3	9
+4	16
+5	25
+6	36
+7	49

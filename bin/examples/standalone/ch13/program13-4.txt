@@ -1,0 +1,29 @@
+Module main()
+   // Declare a constant for the array size.
+   Constant Integer SIZE = 9
+   
+   // Declare an Integer array.
+   Declare Integer numbers[SIZE] = 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+   // Declare a variable to hold a sum.
+   Declare Integer sum
+   
+   // Get the sum of elements 2 through 5.
+   Set sum = rangeSum(numbers, 2, 5)
+   
+   // Display the sum.
+   Display "The sum of elements 2 through 5 is ", sum
+End Module
+
+// The rangeSum function returns the sum of a specified
+// range of elements in array. The start parameter
+// specifies the starting element. The end parameter
+// specifies the ending element.
+Function Integer rangeSum(Integer array[], Integer start, 
+                          Integer end)
+   If start > end Then
+      Return 0
+   Else
+      Return array[start] + rangeSum(array, start + 1, end)
+   End If
+End Function

@@ -1,0 +1,38 @@
+Class ServiceQuote
+   // Fields
+   Private Real partsCharges
+   Private Real laborCharges
+   
+   // Constructor
+   Public Module ServiceQuote(Real pc, Real lc)
+      Set partsCharges = pc
+      Set laborCharges = lc
+   End Module
+   
+   // Mutators
+   Public Module setPartsCharges(Real pc)
+      Set partsCharges = pc
+   End Module
+
+   Public Module setLaborCharges(Real lc)
+      Set laborCharges = lc
+   End Module
+   
+   // Accessors
+   Public Function Real getPartsCharges()
+      Return partsCharges
+   End Function
+   
+   Public Function Real getLaborCharges()
+      Return laborCharges
+   End Function
+   
+   Public Function Real getSalesTax(Real taxRate)
+      // Sales tax is charged only on parts.
+      Return partsCharges * taxRate
+   End Function
+   
+   Public Function Real getTotalCharges(Real taxRate)
+      Return partsCharges + laborCharges + getSalesTax(taxRate)
+   End Function
+End Class

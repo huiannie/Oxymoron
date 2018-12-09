@@ -1,0 +1,36 @@
+// Declare an input file.
+Declare InputFile videoFile
+
+// A variable to hold a time
+// that is read from the file.
+Declare Real runningTime
+
+// Accumulator to hold the total time,
+// initialized to 0.
+Declare Real total = 0
+
+// Open the video_times.dat file.
+Open videoFile "video_times.dat"
+
+Display "Here are the running times, in seconds, of ",
+        "each video in the project:"
+
+// Read all of the times in the file,
+// display them, and calculate their total.
+While NOT eof(videoFile)
+   // read a time.
+   Read videoFile runningTime
+   
+   // Display the time for this video
+   Display runningTime
+   
+   // Add runningTime to total.
+   Set total = total + runningTime
+End While
+
+// Close the file.
+Close videoFile
+
+// Display the total running time.
+Display "The total running time of the videos is ",
+        total, " seconds."

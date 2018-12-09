@@ -1,0 +1,5 @@
+Declare Integer price, discount, sale
+Set price = 100
+Set discount = 20
+Set sale = price - discount
+Display "The total cost is $", sale

@@ -1,0 +1,27 @@
+Module main()
+// Variable to hold the test score
+Declare Real score
+
+// Get the test score.
+Display "Enter your test score."
+Input score
+
+// Determine the grade.
+If score < 60 Then
+    Display "Your grade is F."
+Else
+    If score < 70 Then
+        Display "Your grade is D."
+    Else
+        If score < 80 Then
+            Display "Your grade is C."
+        Else
+            If score < 90 Then
+                Display "Your grade is B."
+            Else 
+                Display "Your grade is A."
+            End If
+        End If
+    End If
+End If
+End Module

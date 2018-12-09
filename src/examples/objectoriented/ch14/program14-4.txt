@@ -1,0 +1,22 @@
+Module main()
+   // A variable to hold a test score.
+   Declare Real testScore
+   
+   // A class variable to reference a
+   // GradedActivity object.
+   Declare GradedActivity test
+   
+   // Create a GradedActivity object
+   Set test = New GradedActivity()
+   
+   // Get a test score from the user.
+   Display "Enter a numeric test score."
+   Input testScore
+   
+   // Store the test score in the object.
+   Call test.setScore(testScore)
+   
+   // Display the grade for the object.
+   Display "The grade for that test is ",
+           test.getGrade()
+End Module

@@ -1,0 +1,16 @@
+// Variable declarations
+Declare Real a, b, c
+
+// Get the length of side A.
+Display "Enter the length of side A."
+Input a
+
+// Get the length of side B.
+Display "Enter the length of side B."
+Input b
+
+// Calculate the length of the hypotenuse.
+Set c = sqrt(a^2 + b^2)
+
+// Display the length of the hypotenuse.
+Display "The length of the hypotenuse is ", c

@@ -1,0 +1,39 @@
+Module main()
+   // Declare a variable for the
+   // number of cups needed.
+   Declare Real cupsNeeded
+
+   // Display an intro message.
+   Call showIntro()
+
+   // Get the number of cups.
+   Display "Enter the number of cups."
+   Input cupsNeeded
+
+   // Convert cups to ounces
+   Call cupsToOunces(cupsNeeded)
+End Module
+
+// The showIntro module displays an
+// introductory screen.
+Module  showIntro()
+   Display "This program converts measurements"
+   Display "in cups to fluid ounces. For your"
+   Display "reference the formula is:"
+   Display "    1 cup = 8 fluid ounces."
+End Module
+
+// The cupsToOunces module accepts a number
+// of cups and displays the equivalent number
+// of ounces.
+Module cupsToOunces ( Real cups)
+   // Declare variables.
+   Declare Real ounces
+
+   // Convert cups to ounces.
+   Set ounces = cups * 8
+
+   // Display the result.
+   Display "That converts to ",
+           ounces, " ounces."
+End Module

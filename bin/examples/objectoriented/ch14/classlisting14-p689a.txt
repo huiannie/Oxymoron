@@ -1,0 +1,5 @@
+Class Vegetable
+   Public Module message()
+      Display "I'm a vegetable."
+   End Module
+End Class

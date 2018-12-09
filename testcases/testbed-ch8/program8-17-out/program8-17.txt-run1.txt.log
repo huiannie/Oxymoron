@@ -1,0 +1,31 @@
+This program calculates the company's
+total sales. Enter the quarterly sales
+amounts for each division when prompted.
+Division 1 quarter 1
+1000.00
+Division 1 quarter 2
+1100.00
+Division 1 quarter 3
+1200.00
+Division 1 quarter 4
+1300.00
+
+Division 2 quarter 1
+2000.00
+Division 2 quarter 2
+2100.00
+Division 2 quarter 3
+2200.00
+Division 2 quarter 4
+2300.00
+
+Division 3 quarter 1
+3000.00
+Division 3 quarter 2
+3100.00
+Division 3 quarter 3
+3200.00
+Division 3 quarter 4
+3300.00
+
+The total company sales are: $25,800.00

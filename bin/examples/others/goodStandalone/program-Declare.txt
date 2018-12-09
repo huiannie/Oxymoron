@@ -1,0 +1,37 @@
+// The following declares a global Integer variable.
+Declare Integer number
+
+// The main module
+Module main()
+    // Get a number from the user and store it
+    // in the global variable number.
+    Display "Enter a number."
+    Input number
+    
+    // Call the showNumber module.
+    Call showNumber()
+End Module
+
+// The showNumber module displays the contents
+// of the global variable number.
+Module showNumber()
+   Declare Integer a, b, c
+   Declare Real d,e,   f
+   Declare String a1 = "abc"
+   Declare Real x=3.4,y=5,   z=-1
+   Declare Real xx, uu
+   Declare Character yy, zz   
+   Declare Character u='a'
+   Declare Character v='c', w=  'd'
+   Declare Real A[3] = 1, 2, 3
+   Declare Real B[3], C[4]
+Display "The number you entered is ", number
+Display "u is ", u
+Display "v is ", v
+Display "w is ", w
+Display "a1 is ", a1
+Display "x is ", x
+Display "y is ", y
+Display "z is ", z
+Display "Array A is ", A[0], " ", A[1], " ", A[2]
+End Module

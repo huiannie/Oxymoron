@@ -1,0 +1,29 @@
+Module main()
+   Declare Integer model
+
+   // Get the model number.
+   Display "Enter the model number."
+   Input model
+
+   While isInvalid(model)
+      Display "The valid model numbers are 100, 200, and 300."
+      Display "Enter a valid model number."
+      Input model
+   End While
+End Module
+
+Function Boolean isInvalid(Integer model)
+   // A local variable to hold True or False.
+   Declare Boolean status
+   
+   // If the model number is invalid, set status to True.
+   // Otherwise, set status to False.
+   If model != 100 AND model != 200 AND model != 300 Then
+      Set status = True
+   Else
+      Set status = False
+   End If
+   
+   // Return the test status.
+   Return status
+End Function

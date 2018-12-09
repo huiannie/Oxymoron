@@ -1,0 +1,6 @@
+Declare Integer counter
+Constant Integer MAX_VALUE = 5
+
+For counter = 1 To MAX_VALUE
+   Display "Hello world"
+End For

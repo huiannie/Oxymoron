@@ -1,0 +1,10 @@
+Declare String password
+// Get the new password.
+Display "Enter your new password."
+Input password
+// Validate the length of the password.
+While length(password) < 6
+   Display "The password must be at least six"
+   Display "characters long. Enter your new password."
+   Input password
+End While

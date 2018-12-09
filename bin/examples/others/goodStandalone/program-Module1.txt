@@ -1,0 +1,14 @@
+Module A()
+End Module
+
+Module B(Integer X)
+End Module
+
+Module C(Integer X[])
+End Module
+
+Module D(Integer X, Integer Ref Y)
+End Module
+
+Module E(Integer X, Integer Ref Y, Integer Z[])
+End Module

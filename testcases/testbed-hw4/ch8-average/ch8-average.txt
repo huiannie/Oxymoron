@@ -1,0 +1,29 @@
+Module main()
+   Declare Real array[4]
+   Declare Integer counter
+   Declare Real average
+
+   For counter = 0 To 3 Step 1
+      Display "Enter number "
+      Input array[counter]
+   End For
+
+   Set average = average(array, 4)
+
+   For counter = 0 To 3 Step 1
+      Display "number ", array[counter]
+   End For
+
+   Display "Average is: ", average
+End Module
+
+Function Real average(Real A[], Integer size)
+   Declare Real total = 0
+   Declare Integer counter
+   
+   For counter = 0 To size-1
+      Set total = A[counter] + total
+   End For
+
+   Return total / size
+End Function

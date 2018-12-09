@@ -1,0 +1,23 @@
+// Declare a string to hold input.
+Declare String str
+
+// Declare a variable to step through the string.
+Declare Integer index
+
+// Declare an accumulator variable to keep count
+// of the number of uppercase letters.
+Declare Integer upperCaseCount = 0
+
+// Prompt the user to enter a sentence.
+Display "Enter a sentence."
+Input str
+
+// Count the number of uppercase letters.
+For index = 0 To length(str) - 1
+   If isUpper(str[index]) Then
+      Set upperCaseCount = upperCaseCount + 1
+   End If
+End For
+
+// Display the number of uppercase characters.
+Display "That string has ", upperCaseCount, " uppercase letters."

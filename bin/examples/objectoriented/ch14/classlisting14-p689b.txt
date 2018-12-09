@@ -1,0 +1,5 @@
+Class Potato Extends Vegetable
+   Public Module message()
+      Display "I'm a potato."
+   End Module
+End Class

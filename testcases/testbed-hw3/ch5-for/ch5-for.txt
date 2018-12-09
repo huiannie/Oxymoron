@@ -1,0 +1,7 @@
+// Counter variable
+Declare Integer counter
+
+// The loop displays 0 to 1000
+For counter = 0 To 1000 Step 10
+   Display counter
+End For

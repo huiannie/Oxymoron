@@ -1,0 +1,8 @@
+Class CellPhone
+   // Field declarations
+   Private String manufacturer
+   Private String modelNumber
+   Private Real retailPrice
+   
+   // This class is not finished!
+End Class

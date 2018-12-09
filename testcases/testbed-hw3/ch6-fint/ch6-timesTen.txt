@@ -1,0 +1,16 @@
+Function Integer timesTen(Integer x)
+   Declare Integer result
+   Set result = x * 10
+   Return result
+End Function
+
+Module main()
+   Declare Integer value
+   Declare Integer result
+
+   Display "Enter a value:"
+   Input value
+
+   Set result = timesTen(value)
+   Display "Result is ", result
+End Module

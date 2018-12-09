@@ -1,0 +1,21 @@
+// Declare an input file.
+Declare InputFile salesFile
+
+// Variable to hold a sales amount
+// that is read from the file.
+Declare Real sales
+
+// Open a file named sales.dat
+Open salesFile "sales.dat"
+
+Display "Here are the sales amounts:"
+
+// Read all of the items in the file
+// and display them.
+While NOT eof(salesFile)
+   Read salesFile sales
+   Display currencyFormat(sales)
+End While
+
+// Close the file.
+Close salesFile

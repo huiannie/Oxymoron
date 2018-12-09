@@ -1,0 +1,22 @@
+Module main ()
+   Call showSquare()
+   Call showHalf()
+End Module
+
+Module showSquare()
+   Declare Real number
+   Declare Real square
+   Display "Enter a number."
+   Input number
+   Set square = number^2
+   Display "The square of that number is ", square
+End Module
+
+Module showHalf()
+   Declare Real number
+   Declare Real half
+   Display "Enter a number."
+   Input number
+   Set half = number / 2
+   Display "Half of that number is ", half
+End Module

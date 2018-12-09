@@ -1,0 +1,9 @@
+Declare Real futureValue, rate, years, presentValue
+Display "Enter the desired future value."
+Input futureValue
+Display "Enter the annual interest rate."
+Input rate
+Display "How many years will you let the money grow?"
+Input years
+Set presentValue = futureValue / (1 + rate)^years
+Display "You will need to deposit $", presentValue

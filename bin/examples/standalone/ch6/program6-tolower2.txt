@@ -1,0 +1,6 @@
+Declare String again
+Do
+   Display "Hello!"
+   Display "Do you want to see that again? (Y = yes)"
+   Input again
+While toLower(again) == "y"

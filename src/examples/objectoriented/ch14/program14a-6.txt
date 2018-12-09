@@ -1,0 +1,22 @@
+Module main()
+   // Declare three class variables.
+   Declare Animal myAnimal
+   
+   // Create an Animal object, a Dog object, 
+   // and a Cat object.
+   Set myAnimal = New Animal()
+   
+   // Show info about an animal.
+   Display "Here is info about an animal."
+   Call showAnimalInfo(myAnimal)
+   Display
+   
+End Module
+
+// The showAnimalInfo module accepts an Animal
+// object as an argument and displays information
+// about it.
+Module showAnimalInfo(Animal creature)
+   Call creature.showSpecies()
+   Call creature.makeSound()
+End Module

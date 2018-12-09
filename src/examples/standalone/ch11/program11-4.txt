@@ -1,0 +1,97 @@
+Module main()
+   // Declare a variable to hold the 
+   // user's menu selection.
+   Declare Integer menuSelection
+ 
+   // Display the menu and get the
+   // user's selection.
+   Call displayMenu(menuSelection)
+ 
+   // Perform the selected operation.
+   Select menuSelection
+      Case 1:
+         Call inchesToCentimeters()
+         
+      Case 2:
+         Call feetToMeters()
+      
+      Case 3:
+         Call milesToKilometers()
+   End Select   
+End Module
+
+// The displayMenu module displays the menu and
+// prompts the user for a selection. The selected
+// value is validated and stored in the selection
+// parameter, which is passed by reference.
+Module displayMenu(Integer Ref selection)
+   // Display the menu.
+   Display "1. Convert inches to centimeters."
+   Display "2. Convert feet to meters."
+   Display "3. Convert miles to kilometers."
+   Display
+
+   // Prompt the user for a selection
+   Display "Enter your selection."
+   Input selection
+
+   // Validate the menu selection.
+   While selection < 1 OR selection > 3
+      Display "That is an invalid selection. ",
+              "Enter 1, 2, or 3."
+      Input selection
+   End While
+End Module
+
+// The inchesToCentimeters module converts a
+// measurement from inches to centimeters.
+Module inchesToCentimeters()
+   // Local variables
+   Declare Real inches, centimeters
+
+   // Get the number of inches.
+   Display "Enter the number of inches."
+   Input inches
+   
+   // Convert the inches to centimeters.
+   Set centimeters = inches * 2.54
+
+   // Display the result.
+   Display "That is equal to ", centimeters,
+           " centimeters."
+End Module
+
+// The feetToMeters module converts a
+// measurement from feet to meters.
+Module feetToMeters()
+   // Local variables
+   Declare Real feet, meters
+   
+   // Get the number of feet.
+   Display "Enter the number of feet."
+   Input feet
+   
+   // Convert feet to meters
+   Set meters = feet * 0.3048
+   
+   // Display the result.
+   Display "That is equal to ", meters, " meters."
+End Module
+
+// The milesToKilometers module converts a
+// measurement from miles to kilometers.
+Module milesToKilometers()
+   // Local variables
+   Declare Real miles, kilometers
+
+   // Get the number of miles.
+   Display "Enter the number of miles."
+   Input miles
+
+   // Convert miles to kilometers
+   Set kilometers = miles * 1.609
+
+   // Display the result.
+   Display "That is equal to ", kilometers,
+           " kilometers."
+End Module

@@ -1,0 +1,16 @@
+5
+2
+Medium
+1
+Local Flavor Decaf
+100
+n
+5
+3
+Sumatra Decaf
+60
+5
+4
+Sumatra Dark Roast
+5
+6

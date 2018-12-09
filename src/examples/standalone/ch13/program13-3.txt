@@ -1,0 +1,31 @@
+Module main()
+   // Local variable to hold a number
+   // entered by the user.
+   Declare Integer number
+   
+   // Local variable to hold the 
+   // factorial of the number
+   Declare Integer numFactorial
+   
+   // Get a number from the user.
+   Display "Enter a nonnegative integer."
+   Input number
+   
+   // Get the factorial of the number.
+   Set numFactorial = factorial(number)
+   
+   // Display the factorial.
+   Display "The factorial of ", number,
+           " is ", numFactorial
+End Module
+
+// The factorial function uses recursion to
+// calculate the factorial of its argument.
+// which is assumed to be nonnegative.
+Function Integer factorial(Integer n)
+   If n == 0 Then
+      Return 1
+   Else
+      Return n * factorial(n-1)
+   End If
+End Function

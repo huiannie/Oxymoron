@@ -1,0 +1,48 @@
+// Declare a variable to hold the 
+// user's menu selection.
+Declare Integer menuSelection
+ 
+// Declare variables to hold the units
+// of measurement.
+Declare Real inches, centimeters, feet, meters,
+             miles, kilometers
+ 
+// Display the menu.
+Display "1. Convert inches to centimeters."
+Display "2. Convert feet to meters."
+Display "3. Convert miles to kilometers."
+Display
+  
+// Prompt the user for a selection
+Display "Enter your selection."
+Input menuSelection
+
+// Perform the selected operation.
+If menuSelection == 1 Then
+   // Convert inches to centimeters
+   Display "Enter the number of inches."
+   Input inches
+   Set centimeters = inches * 2.54
+   Display "That is equal to ", centimeters,
+           " centimeters."
+Else
+   If menuSelection == 2 Then
+      // Convert feet to meters
+      Display "Enter the number of feet."
+      Input feet
+      Set meters = feet * 0.3048
+      Display "That is equal to ", meters, " meters."
+   Else
+      If menuSelection == 3 Then
+         // Convert miles to kilometers
+         Display "Enter the number of miles."
+         Input miles
+         Set kilometers = miles * 1.609
+         Display "That is equal to ", kilometers,
+                 " kilometers."
+      Else
+         // Display an error message.
+         Display "That is an invalid selection."
+      End If
+   End If
+End If 

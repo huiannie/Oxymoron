@@ -1,0 +1,9 @@
+Declare Real a=5, b=20
+
+If a < 10 Then
+   Set b = 0
+Else
+   Set b = 99
+End If
+
+Display "a=", a, " b=", b

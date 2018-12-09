@@ -1,0 +1,11 @@
+Class Cat Extends Animal
+   // showSpecies method
+   Public Module showSpecies()
+      Display "I'm a cat."
+   End Module
+   
+   // makeSound method
+   Public Module makeSound()
+      Display "Meow"
+   End Module
+End Class

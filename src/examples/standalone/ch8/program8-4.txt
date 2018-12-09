@@ -1,0 +1,33 @@
+// Constant for the size of the array.
+Constant Integer SIZE = 6
+
+// Array to hold each employee's hours.
+Declare Real hours[SIZE]
+
+// Variable to hold the hourly pay rate.
+Declare Real payRate
+
+// Variable to hold a gross pay amount
+Declare Real grossPay
+
+// Variable to use as a loop counter.
+Declare Integer index
+
+// Get each employee's hours worked.
+For index = 0 To SIZE - 1
+   Display "Enter the hours worked by"
+   Display "employee ", index + 1, "."
+   Input hours[index]
+End For
+
+// Get the hourly pay rate.
+Display "Enter the hourly pay rate."
+Input payRate
+
+// Display each employee's gross pay.
+Display "Here is each empolyee's gross pay."
+For index = 0 To SIZE - 1
+   Set grossPay = hours[index] * payRate
+   Display "Employee ", index + 1, ": ",
+           currencyFormat(grossPay)
+End For

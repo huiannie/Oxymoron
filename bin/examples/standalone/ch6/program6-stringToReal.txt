@@ -1,0 +1,6 @@
+Declare Real realNumber
+Declare String str = "-90.0"
+Set realNumber = stringToReal("65.1")
+Display realNumber
+Set realNumber = stringToReal(str)
+Display realNumber

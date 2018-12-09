@@ -1,0 +1,29 @@
+// Variable for the fields
+Declare String name
+Declare Integer idNumber
+Declare String department
+
+// Declare an input file.
+Declare InputFile employeeFile
+
+// Open a file named employee.dat
+Open employeeFile "employees.dat"
+
+Display "Here are the employee records."
+
+// Display the records in the file.
+While NOT eof(employeeFile)
+   // Read a record from the file.
+   Read employeeFile name, idNumber, department
+
+   // Display the record.
+   Display "Name: ", name
+   Display "ID Number: ", idNumber
+   Display "Department: ", department
+   
+   // Display a blank line.
+   Display
+End While
+
+// Close the file.
+Close employeeFile

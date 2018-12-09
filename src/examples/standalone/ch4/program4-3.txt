@@ -1,0 +1,14 @@
+// A variable to hold a password
+Declare String password
+
+// Prompt the user to enter the password.
+Display "Enter the password."
+Input password
+
+// Determine whether the correct password
+// was entered
+If password == "prospero" Then
+   Display "Password accepted."
+Else
+   Display "Sorry, that is not the correct password."
+End If

@@ -1,0 +1,5 @@
+Declare Real dollars
+Set dollars = 2.75
+Display "I have ", dollars, " in my account."
+Set dollars = 99.95
+Display "But now I have ", dollars, " in my account!"

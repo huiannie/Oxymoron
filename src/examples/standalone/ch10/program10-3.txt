@@ -1,0 +1,33 @@
+// Variable to hold the number of days
+Declare Integer numDays
+
+// Counter variable for the loop
+Declare Integer counter
+
+// Variable to hold an amount of sales
+Declare Real sales
+
+// Declare an output file.
+Declare OutputFile salesFile
+
+// Get the number of days.
+Display "For how many days do you have sales?"
+Input numDays
+
+// Open a file named sales.dat
+Open salesFile "sales.dat"
+
+// Get the amount of sales for each day and write
+// it to the file.
+For counter = 1 To numDays
+   //Get the sales for a day
+   Display "Enter the sales for day #", counter
+   Input sales
+   
+   // Write the amount to the file.
+   Write salesFile sales
+End For
+
+// Close the file.
+Close salesFile
+Display "Date written to sales.dat"

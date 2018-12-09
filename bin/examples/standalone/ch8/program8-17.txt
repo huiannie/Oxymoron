@@ -1,0 +1,39 @@
+// Constants for the array sizes.
+Constant Integer ROWS = 3
+Constant Integer COLS = 4
+
+// An array to hold company sales.
+Declare Real sales[ROWS][COLS]
+
+// Counter variables
+Declare Integer row, col
+
+// Accumulator
+Declare Real total = 0
+
+// Display instructions.
+Display "This program calculates the company's"
+Display "total sales. Enter the quarterly sales"
+Display "amounts for each division when prompted."
+
+// Nested loops to fill the array with quarterly
+// sales amounts for each division.
+For row = 0 To ROWS - 1
+   For col = 0 To COLS - 1
+      Display "Division ", row + 1, " quarter ", col + 1
+      Input sales[row][col]
+   End For
+   // Display a blank line.
+   Display
+End For
+
+// nested loops to add all of the array elements.
+For row = 0 To ROWS - 1
+   For col = 0 To COLS - 1
+      Set total = total + sales[row][col]
+   End For
+End For
+
+// Display the total sales.
+Display "The total company sales are: ", 
+        currencyFormat(total)

@@ -1,0 +1,40 @@
+Class Car
+   // Fields
+   Private String make
+   Private String model
+   Private Integer year
+   
+   // Constructor
+   Public Module Car(String carMake, 
+          String carModel, Integer carYear)
+      Set make = carMake
+      Set model = carModel
+      Set year = carYear
+   End Module
+   
+   // Mutators
+   Public Module setMake(String m)
+      Set make = m
+   End Module
+   
+   Public Module setModel(String m)
+      Set model = m
+   End Module
+   
+   Public Module setYear(String y)
+      Set year = y
+   End Module
+   
+   // Accessors
+   Public Function String getMake()
+      Return make
+   End Function
+   
+   Public Function String getModel()
+      Return model
+   End Function
+   
+   Public Function String getYear()
+      Return year
+   End Function
+End Class   

@@ -1,0 +1,12 @@
+Declare Integer month = 2
+
+Select month
+   Case 1:
+      Display "January has 31 days."
+   Case 2:
+      Display "February has 28 days."
+   Case 3:
+      Display "March has 31 days."
+   Default:
+      Display "Invalid selection."
+End Select

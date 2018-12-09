@@ -1,0 +1,92 @@
+Module main()
+   // Constant for the array size
+   Constant Integer SIZE = 6
+   
+   // Array to hold test scores
+   Declare Integer testScores[SIZE]
+   
+   // Get the test scores.
+   Call getTestScores(testScores, SIZE)
+   
+   // Sort the test scores.
+   Call bubbleSort(testScores, SIZE)
+   
+   // Display the test scores.
+   Display "Here are the test scores."
+   Display "sorted from lowest to highest."
+   Call showTestScores(testScores, SIZE)
+End Module
+
+// The getTestScores module prompts the user
+// to enter test scores into the array that is
+// passed as an argument.
+Module getTestScores(Integer Ref array[], Integer arraySize)
+   // Counter variable
+   Declare Integer index
+   
+   // Get the test scores.
+   For index = 0 To arraySize - 1
+      Display "Enter scores number ", index + 1
+      Input array[index]
+   End For
+End Module
+
+// The bubbleSort module accepts an array of Integers
+// and the array's size as arguments. When the module
+// is finished, the values in the array will be sorted
+// in ascending order.
+Module bubbleSort(Integer Ref array[], Integer arraySize)
+   // The maxElement variable will contain the subscript
+   // of the last element in the array to compare.
+   Declare Integer maxElement
+   
+   // The index variable will be used as a counter
+   // in the inner loop.
+   Declare Integer index
+   
+   // The outer loop positions maxElement at the last
+   // element to compare during each pass through the
+   // array. Initially maxElement is the index of the
+   // last element in the array. During each iteration,
+   // it is decreased by one.
+   For maxElement = arraySize - 1 To 0 Step - 1
+      
+      // The inner loop steps through the array, comparing
+      // each element with its neighbor. All of the 
+      // elements from index 0 through maxElement are
+      // involved in the comparison. If two elements are
+      // out of order, they are swapped.
+      For index = 0 To maxElement - 1
+
+         // Compare an element with its neighbor and swap
+         // if necessary.
+         If array[index] > array[index + 1] Then
+            Call swap(array[index], array[index + 1])
+         End If
+      End For
+   End For
+End Module
+
+// The swap module accepts two Integer arguments
+// and swaps their contents.
+Module swap(Integer Ref a, Integer Ref b)
+   // Local variable for temporary storage.
+   Declare Integer temp
+
+   // Swap the values in a and b.
+   Set temp = a
+   Set a = b
+   Set b = temp
+End Module
+
+// The showTestScores module displays the contents
+// of the array that is passed as an argument.
+Module showTestScores(Integer array[], Integer arraySize)
+   // Counter variable
+   Declare Integer index
+   
+   // Display the test scores.
+   For index = 0 To arraySize - 1
+      Display array[index]
+   End For
+End Module

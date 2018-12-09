@@ -1,0 +1,23 @@
+// Create a 2D array.
+Constant Integer ROWS = 3
+Constant Integer COLS = 4
+Declare Integer values[ROWS][COLS]
+
+// Counter variables for rows and columns.
+Declare Integer row, col
+
+// Get values to store in the array.
+For row = 0 To ROWS - 1
+   For col = 0 To COLS - 1
+      Display "Enter a number."
+      Input values[row][col]
+   End For
+End For
+
+// Display the values in the array.
+Display "Here are the values you entered."
+For row = 0 To ROWS - 1
+   For col = 0 To COLS - 1
+      Display values[row][col]
+   End For
+End For

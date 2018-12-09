@@ -1,0 +1,50 @@
+Class D Extends C
+   Private Integer d1
+   Protected Integer d2
+   Public Integer d3
+   
+   Public Module D(Integer x)
+      Set d1 = 0
+      Set c3 = 0
+      Set a3 = 0
+   End Module
+   
+   Private Module p1(Integer x)
+      Display "In Class D private overridden-module p1"
+      Set d1 = x
+      Set d2 = x
+      Set d3 = x
+      Call m2(x)
+      Call m3(x)
+      Display "From Class D overridden-module p1: d1=", d1, " d2=", d2, " d3=", d3
+   End Module
+   
+   Protected Module p2(Integer x)
+      Display "In Class D protected overridden-module p2"
+      Set d1 = x
+      Set d2 = x
+      Set c3 = x
+      Set a2 = x
+      Set a3 = x
+      Call m2(x)
+      Call m3(x)
+      Call p1(x)
+      Display "From Class D overridden-module p2: d1=", d1, " d2=", d2, " c3=", c3, " a2=", a2, " a3=", a3
+   End Module
+
+   Public Module p3(Integer x)
+      Display "In Class D public overridden-module p3"
+      Declare Integer local
+      Call p1(x)
+      Call m2(x)
+      Set a2 = x
+      Set a3 = x
+      Call m2(x)
+      Call m3(x)
+      Call p1(x)
+      Call p2(x)
+      Display "From Class D overridden-module p3: d1=", d1, " d2=", d2, " d3=", d3, " c1=", get1(x), " a2=", a2, " a3=", a3
+      
+      Set local = get1(x)
+   End Module
+End Class

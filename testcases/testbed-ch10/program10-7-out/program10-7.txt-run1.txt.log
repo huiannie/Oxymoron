@@ -1,0 +1,24 @@
+How many employee records do you want to create?
+3
+Enter the name of employee #1
+Colleen Pickett
+Enter the employee's ID number.
+7311
+Enter the employee's department.
+Accounting
+
+Enter the name of employee #2
+Ryan Pryce
+Enter the employee's ID number.
+8996
+Enter the employee's department.
+Security
+
+Enter the name of employee #3
+Bonnie Dundee
+Enter the employee's ID number.
+2301
+Enter the employee's department.
+Marketing
+
+Employee records written to employees.dat

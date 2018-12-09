@@ -1,0 +1,15 @@
+// Declare a variable to control the
+// loop iterations
+Declare String again
+
+Do
+   // Roll the dice.
+   Display "Rolling the dice..."
+   Display "Their values are:"   
+   Display random(1, 6)
+   Display random(1, 6)
+
+   // Do this again?
+   Display "Want to roll them again? (y=yes)"
+   Input again   
+While again == "y" OR again == "Y"

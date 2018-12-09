@@ -1,0 +1,23 @@
+// Variables
+Declare Integer counter = 1
+Declare Integer square
+
+// Constant for the maximum value
+Constant Integer MAX_VALUE = 10
+
+// Display table headings.
+Display "Number", Tab, "Square"
+Display "-----------------------"
+
+// Display the numbers 1 through 10 and
+// their squares.
+While counter <= MAX_VALUE
+   // Calculate the square of a number
+   Set square = counter^2
+
+   // Display number and its squared.
+   Display counter, Tab, square
+   
+   // Increment counter.
+   Set counter = counter + 1
+End While

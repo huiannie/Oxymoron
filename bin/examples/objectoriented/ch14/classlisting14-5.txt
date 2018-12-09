@@ -1,0 +1,40 @@
+Class Customer
+   // Fields
+   Private String name
+   Private String address
+   Private String phone
+   
+   // Constructor
+   Public Module Customer (String n, String a,
+                           String p)
+      Set name = n
+      Set address = a
+      Set phone = p
+   End Module
+   
+   // Mutators
+   Public Module setName(String n)
+      Set name = n
+   End Module
+   
+   Public Module setAddress(String a)
+      Set address = a
+   End Module
+   
+   Public Module setPhone(String p)
+      Set phone = p
+   End Module
+   
+   // Accessors
+   Public Function String getName()
+      Return name
+   End Function
+   
+   Public Function String getAddress()
+      Return address
+   End Function
+   
+   Public Function String getPhone()
+      Return phone
+   End Function
+End Class   

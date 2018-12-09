@@ -1,0 +1,4 @@
+Display 5 + 2 * 4
+Display 10 / 2 - 3
+Display 8 + 12 * 2 - 4
+Display 6 - 3 * 2 + 7 - 1

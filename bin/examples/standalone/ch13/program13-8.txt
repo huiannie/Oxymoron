@@ -1,0 +1,34 @@
+Module main()
+   // A constant for the number of discs to move.
+   Constant Integer NUM_DISCS = 3
+   
+   // A constant for the initial "from" peg.
+   Constant Integer FROM_PEG = 1
+      
+   // A constant for the initial "to" peg.
+   Constant Integer TO_PEG = 3
+
+   // A constant for the initial "temp" peg.
+   Constant Integer TEMP_PEG = 2
+
+   // Play the game.
+   Call moveDiscs(NUM_DISCS, FROM_PEG, TO_PEG, TEMP_PEG)
+   Display "All the pegs are moved!"
+End Module
+
+// The moveDiscs function displays a disc move in
+// the Towers of Hanoi game.
+// The parameters are:
+//    num:     The number of discs to move.
+//    fromPeg: The peg to move from.
+//    toPeg:   The peg to move to.
+//    tempPeg: The temporary peg.
+Module moveDiscs(Integer num, Integer fromPeg,
+                 Integer toPeg, Integer tempPeg)
+   If num > 0 Then
+      Call moveDiscs(num - 1, fromPeg, tempPeg, toPeg)
+      Display "Move a disc from peg ", fromPeg,
+              " to peg ", toPeg
+      Call moveDiscs(num - 1, tempPeg, toPeg, fromPeg)
+   End If
+End Module

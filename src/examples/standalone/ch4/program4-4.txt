@@ -1,0 +1,19 @@
+// Declare variables to hold two names
+Declare String name1
+Declare String name2
+
+// Prompt the user for two names.
+Display "Enter a name (last name first)."
+Input name1
+Display "Enter another name (last name first)."
+Input name2
+
+// Display the names in alphabetical order
+Display "Here are the names, listed alphabetically:"
+If name1 < name2 Then
+   Display name1
+   Display name2
+Else
+   Display name2
+   Display name1
+End If

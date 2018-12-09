@@ -1,0 +1,2 @@
+Declare String name = "Kevin"
+Display substring(name, 2, 2)

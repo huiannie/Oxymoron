@@ -1,0 +1,32 @@
+Class B Extends A
+   Private Integer b1
+   Protected Integer b2
+   Public Integer b3
+   
+   Private Module n1(Integer x)
+      Call m2(1)
+      Call m3(1)
+      Set b1 = x
+   End Module
+   
+   Protected Module n2(Integer x)
+      Call m2(1)
+      Call m3(1)
+      Call n1(1)
+      Set b2 = x
+   End Module
+
+   Public Module n3(Integer x)
+      Call m2(1)
+      Call m3(1)
+      Call n1(1)
+      Call n2(1)
+      Set b3 = x
+   End Module
+   
+   Public Function Integer get1(Integer x)
+      Display "(Getting b1 from B)"
+      Return b1
+   End Function
+   
+End Class

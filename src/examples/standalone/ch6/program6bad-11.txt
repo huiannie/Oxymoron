@@ -1,0 +1,20 @@
+// Declare a variable to hold the number
+// of ounces of lemonade available.
+Declare Real ounces
+
+// Declare a variable to hold the number
+// of people whom we can serve.
+Declare Integer numberOfPeople
+
+// Constant for the number of ounces per person.
+Constant Integer OUNCES_PER_PERSON = 8
+
+// Get the number of ounces of lemonade available.
+Display "How many ounces of lemonade do you have?"
+Input ounces
+
+// Calculate the number of people who can be served.
+Set numberOfPeople = (ounces / OUNCES_PER_PERSON)
+
+// Display the number of people who can be served.
+Display "You can serve ", numberOfPeople, " people."

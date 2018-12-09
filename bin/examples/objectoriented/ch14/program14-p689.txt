@@ -1,0 +1,8 @@
+Module main()
+   Declare Vegetable v
+   Declare Potato p
+   Set v = New Potato()
+   Set p = New Potato()
+   Call v.message()
+   Call p.message()
+End Module

@@ -1,0 +1,21 @@
+Please enter x:
+4.0
+Please enter y:
+5.0
+Sum is 9.0
+Do you want to do it again?
+yes
+Please enter x:
+-1
+Please enter y:
+-2
+Sum is -3.0
+Do you want to do it again?
+yes
+Please enter x:
+0
+Please enter y:
+3
+Sum is 3.0
+Do you want to do it again?
+no

@@ -1,0 +1,9 @@
+Module main ()
+   Display "I have a message for you."
+   Call showMessage()
+   Display "That's all, folks!"
+End Module
+
+Module showMessage()
+   Display "Hello world"
+End Module

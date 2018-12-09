@@ -1,0 +1,2 @@
+Declare String str = "WARNING!"
+Display toLower(str)

@@ -1,0 +1,59 @@
+Module main()
+   // Declare a variable to hold a telephone number.
+   Declare String phoneNumber
+   
+   // Prompt the user to enter a telephone number.
+   Display "Enter a telephone number. The number you"
+   Display "enter should be formatted as (XXX)XXX-XXXX"
+   Input phoneNumber
+   
+   // If the input is properly formatted, unformat it.
+   If isValidFormat(phoneNumber) Then
+      Call unformat(phoneNumber)
+      Display "The unformatted number is ", phoneNumber
+   Else
+      Display "That number is not properly formatted."
+   End If
+End Module
+
+// The isValidFormat function accepts a string argument
+// and determines whether it is properly formatted as
+// a US telephone number in the following manner:
+// (XXX)XXX-XXXX
+// If the argument is properly formatted, the function
+// returns True, otherwise False.
+Function Boolean isValidFormat(String str)
+   // Local variable to indicate valid format
+   Declare Boolean valid
+   
+   // Determine whether str is properly formatted.
+   If length(str) == 13 AND str[0] == "(" AND
+      str[4] == ")" AND str[8] == "-" Then
+         Set valid = True
+      Else
+         Set valid = False
+      End If
+      
+      // Return the value of valid.
+      Return valid
+End Function
+
+// The unformat module accepts a string, by reference,
+// assumed to contain a telephone number formatted in
+// this manner: (XXX)XXX-XXXX.
+// The module unformats the string by removing the
+// parentheses and the hyphen.
+Module unformat(String Ref str)
+   // First, delete the left paren at position 0.
+   Call delete(str, 0, 0)
+
+   // Next, delete the hyphen. Because of the
+   // previous deletions it is now located at
+   // position 3.
+   Call delete(str, 3, 3)
+   
+   // Next, delete the hyphen. Because of the
+   // previous deletions it is now located at
+   // position 6.
+   Call delete(str, 6, 6)
+End Module

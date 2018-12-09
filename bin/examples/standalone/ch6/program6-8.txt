@@ -1,0 +1,80 @@
+Module main()
+   // Local variables
+   Declare Real sales, commissionRate, advancedPay, pay
+   
+   // Get the amount of sales.
+   Set sales = getSales()
+
+   // Get the amount of advanced pay.
+   Set advancedPay = getAdvancedPay()
+   
+   // Determine the commission rate.
+   Set commissionRate = determineCommissionRate(sales)
+   
+   // Calculate the pay.
+   Set pay = sales * commissionRate - advancedPay
+
+   // Display the amount of pay.
+   Display "The pay is $", pay
+   
+   // Determine whether the pay is negative.
+   If pay < 0 Then
+      Display "The salesperson must reimburse"
+      Display "the company."
+   End If
+End Module
+
+// The getSales function gets a salesperson's
+// monthly sales from the user and returns
+// that value as a Real.
+Function Real getSales()
+   // Local variable to hold the monthly sales.
+   Declare Real monthlySales
+   
+   // Get the amount of monthly sales.
+   Display "Enter the salesperson's monthly sales."
+   Input monthlySales
+   
+   // Return the amount of monthly sales
+   Return monthlySales
+End Function
+
+// The getAdvancedPay function gets the amount of
+// advanced pay given to the salesperson and
+// returns that amount as a Real
+Function Real getAdvancedPay()
+   // Local variable to hold the advanced pay.
+   Declare Real advanced
+   
+   // Get the amount of advanced pay.
+   Display "Enter the amount of advanced pay, or"
+   Display "0 if no advanced pay was given."
+   Input advanced
+   
+   // Return the advanced pay.
+   Return advanced
+End Function
+
+// The determineCommissionRate function accepts the
+// amount of sales as an argument and returns the
+// commission rate as a Real.
+Function Real determineCommissionRate(Real sales)
+   // Local variable to hold commission rate.
+   Declare Real rate
+   
+   // Determine the commission rate.
+   If sales < 10000.00 Then
+      Set rate = 0.10
+   Else If sales >= 10000.00 AND sales <= 14999.99 Then
+      Set rate = 0.12
+   Else If sales >= 15000.00 AND sales <= 17999.99 Then
+      Set rate = 0.14
+   Else If sales >= 18000.00 AND sales <= 21999.99 Then
+      Set rate = 0.16
+   Else
+      Set rate = 0.18
+   End If
+   
+   // Return the commission rate.
+   Return rate
+End Function

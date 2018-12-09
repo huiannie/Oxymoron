@@ -1,0 +1,5 @@
+Declare String lastName = "Conway"
+Declare String salutation = "Mr. "
+Declare String properName
+Set properName = append(salutation, lastName)
+Display properName

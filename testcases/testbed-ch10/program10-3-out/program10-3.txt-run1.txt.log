@@ -1,0 +1,13 @@
+For how many days do you have sales?
+5
+Enter the sales for day #1
+1000.00
+Enter the sales for day #2
+2000.00
+Enter the sales for day #3
+3000.00
+Enter the sales for day #4
+4000.00
+Enter the sales for day #5
+5000.00
+Date written to sales.dat

@@ -1,0 +1,17 @@
+Declare Integer A=1
+Declare Integer X=2
+Declare Integer Y=4, Z= 2
+
+While Z>0
+   Display "Y is ", Y
+   Set Y = Y-1
+   Do
+      Display "A is ", A
+      While X>=2
+         Display "X is ", X
+         Set X=1
+      End While
+      Set Y = Y - 1
+   Until Y <= 0
+   Set Z = Z - 1
+End While

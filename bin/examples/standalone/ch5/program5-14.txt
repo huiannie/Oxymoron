@@ -1,0 +1,10 @@
+// Declare and initialize a counter variable.
+Declare Integer counter = 1
+
+// Constant for the maximum value
+Constant Integer MAX_VALUE = 5
+
+While counter <= MAX_VALUE
+   Display "Hello world"
+   Set counter = counter + 1
+End While

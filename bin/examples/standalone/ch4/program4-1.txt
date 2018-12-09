@@ -1,0 +1,26 @@
+// Declare variables
+Declare Real test1, test2, test3, average
+
+// Get test 1
+Display "Enter the score for test #1."
+Input test1
+
+// Get test 2
+Display "Enter the score for test #2."
+Input test2
+
+// Get test 3
+Display "Enter the score for test #3."
+Input test3
+
+// Calculate the average score.
+Set average = (test1 + test2 + test3) / 3
+
+// Display the average
+Display "The average is ", average
+
+// If the average is greater than 95
+// congratulate the user.
+If average > 95 Then
+   Display "Congratulations! Great average!"
+End If

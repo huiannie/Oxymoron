@@ -1,0 +1,29 @@
+Class A
+   Private Integer a1
+   Protected Integer a2
+   Public Integer a3
+   
+   Private Module m1(Integer x)
+      Display "In Class A private method m1"
+      Set a1 = x
+   End Module
+   
+   Protected Module m2(Integer x)
+      Display "In Class A protected method m2"
+      Call m1(x)
+      Set a2 = x
+   End Module
+
+   Public Module m3(Integer x)
+      Display "In Class A public method m3"
+      Call m1(x)
+      Call m2(x)
+      Set a3 = x
+   End Module
+   
+   Public Function Integer get1(Integer x)
+      Display "(Getting a1 from A)"
+      Return a1
+   End Function
+   
+End Class

@@ -1,0 +1,9 @@
+Declare String str = "12.9"
+Declare Real realNumber
+
+If isReal(str) Then
+   Set realNumber = stringToReal(str)
+   Display realNumber
+Else
+   Display "Invalid data"
+End If

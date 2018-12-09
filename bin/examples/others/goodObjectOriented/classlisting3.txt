@@ -1,0 +1,50 @@
+Class C Extends A
+   Private Integer c1
+   Protected Integer c2
+   Public Integer c3
+   
+   Public Module C(Integer x)
+      Set c1 = 0
+      Set a3 = 0
+   End Module
+   
+   Private Module p1(Integer x)
+      Display "In Class C private p1"
+      Set c1 = x
+      Set c2 = x
+      Set c3 = x
+      Call m2(x)
+      Call m3(x)
+      Display "From Class C private module p1: c1=", c1, " c2=", c2, " c3=", c3
+   End Module
+   
+   Protected Module p2(Integer x)
+      Display "In Class C protected p2"
+      Set c1 = x
+      Set c2 = x
+      Set c3 = x
+      Set a2 = x
+      Set a3 = x
+      Call m2(x)
+      Call m3(x)
+      Call p1(x)
+      Display "From Class C protected module p2: c1=", c1, " c2=", c2, " c3=", c3, " a2=", a2, " a3=", a3
+   End Module
+
+   Public Module p3(Integer x)
+      Display "In Class C public p3"
+      Call m2(x)
+      Call m3(x)
+      Call p1(x)
+      Call p2(x)
+      Set a2 = x
+      Set a3 = x
+      Display "From Class C public module p3: c1=", c1, " c2=", c2, " c3=", c3, " c1=", get1(x), " a2=", a2, " a3=", a3
+   End Module
+   
+   Public Function Integer get1(Integer x)
+      Display "(overridden get1() Getting c1 from C)"
+      Return c1
+   End Function
+   
+End Class

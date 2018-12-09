@@ -1,0 +1,3 @@
+Declare Integer number
+Set number = random(1, 10)
+Display number

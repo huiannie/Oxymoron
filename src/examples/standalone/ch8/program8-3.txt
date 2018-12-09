@@ -1,0 +1,22 @@
+// Create a constant for the size of the array.
+Constant Integer SIZE = 3
+
+// Declare an array to hold the number of hours
+// worked by each employee.
+Declare Integer hours[SIZE]
+
+// Declare a variable to use in the loops.
+Declare Integer index
+
+// Get the hours for each employee.
+For index = 0 To SIZE - 1
+   Display "Enter the hours worked by"
+   Display "employee number ", index + 1
+   Input hours[index]
+End For
+
+// Display the values entered.
+Display "The hours you entered are:"
+For index = 0 To SIZE - 1
+   Display hours[index]
+End For

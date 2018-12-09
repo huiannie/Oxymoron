@@ -1,0 +1,31 @@
+Module main()
+   // Declare a variable to hold a telephone number.
+   Declare String phoneNumber
+   
+   // Prompt the user to enter a telephone number.
+   Display "Enter an unformatted 10 digit telephone number."
+   Input phoneNumber
+   
+   // If the input is 10 characters long, format it.
+   If length(phoneNumber) == 10 Then
+      Call format(phoneNumber)
+      Display "The formatted number is ", phoneNumber
+   Else
+      Display "That number is not 10 digits."
+   End If
+End Module
+
+// The format module accepts a string, by reference,
+// assumed to contain an unformatted 10 digit telephone
+// number. The module formats the string in the following
+// manner: (XXX)XXX-XXXX.
+Module format(String Ref str)
+   // First, insert the left paren at position 0.
+   Call insert(str, 0, "(")
+   
+   // Nextt, insert the right paren at position 4.
+   Call insert(str, 4, ")")
+   
+   // Next, insert the hyphen at position 8.
+   Call insert(str, 8, "-")
+End Module

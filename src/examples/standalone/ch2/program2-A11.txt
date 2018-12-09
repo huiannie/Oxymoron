@@ -1,0 +1,7 @@
+Declare Integer a = 5
+Declare Integer b = 2
+Declare Integer c = 3
+Declare Integer result
+
+Set result = a + b * c
+Display result

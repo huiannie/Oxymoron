@@ -1,0 +1,8 @@
+if [ $# -gt 0 ] 
+then
+  for arg in $*
+  do
+    java -jar oxymoron.jar ${arg} ${arg}-data/ ${arg}-out/ 
+    java -jar oxymoron.jar ${arg} ${arg}-data/ ${arg}-out/ > logs/${arg}.log
+  done
+fi

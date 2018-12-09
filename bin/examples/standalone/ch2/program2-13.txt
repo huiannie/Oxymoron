@@ -1,0 +1,10 @@
+Declare Real test1
+Declare Real test2
+Declare Real test3
+Declare Real average
+
+Set test1 = 88.0
+Set test2 = 92.5
+Set test3 = 97.0
+Set average = (test1 + test2 + test3) / 3
+Display "Your average test score is ", average

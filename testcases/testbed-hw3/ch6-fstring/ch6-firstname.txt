@@ -1,0 +1,12 @@
+Function String getFirstName()
+   Declare String firstname
+   Display "Please enter your firstname:"
+   Input firstname
+   Return firstname
+End Function
+
+Module main()
+   Declare String name
+   Set name = getFirstName()
+   Display "You have entered ", name
+End Module

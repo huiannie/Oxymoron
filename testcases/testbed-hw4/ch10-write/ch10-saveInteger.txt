@@ -1,0 +1,19 @@
+Module main()
+   Declare Integer array[10]
+   Declare OutputFile outfile
+   Declare Integer counter
+
+   For counter = 0 To 9
+      Display "Enter number: "
+      Input array[counter]
+   End For
+
+   Open outfile "xxx-output1.txt"
+
+   For counter = 0 To 9
+      Write outfile array[counter]
+   End For
+
+   Close outfile
+
+End Module

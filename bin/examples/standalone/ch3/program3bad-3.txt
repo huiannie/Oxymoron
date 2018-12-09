@@ -1,0 +1,12 @@
+Module main ()
+   Call getName()
+   Display "Hello ", name
+End Module
+
+Module getName()
+   Declare String name
+   Display "Enter your name."
+   Input name
+End Module
+
+

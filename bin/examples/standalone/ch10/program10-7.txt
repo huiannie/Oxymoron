@@ -1,0 +1,47 @@
+// Variable for the fields
+Declare String name
+Declare Integer idNumber
+Declare String department
+
+// A variable for the number of employee records.
+Declare Integer numEmployees
+
+// Counter variable for the loop
+Declare Integer counter
+
+// Declare an output file.
+Declare OutputFile employeeFile
+
+// Get the number of employees.
+Display "How many employee records do ",
+        "you want to create?"
+Input numEmployees
+
+// Open a file named employees.dat.
+Open employeeFile "employees.dat"
+
+// Get each employee's data and write it
+// to the file.
+For counter = 1 To numEmployees
+   //Get the employee name.
+   Display "Enter the name of employee #", counter
+   Input name
+   
+   //Get the employee ID number.
+   Display "Enter the employee's ID number."
+   Input idNumber
+   
+   //Get the employee's department.
+   Display "Enter the employee's department."
+   Input department
+   
+   // Write the record to the file.
+   Write employeeFile name, idNumber, department
+   
+   // Display a blank line.
+   Display
+End For
+
+// Close the file.
+Close employeeFile
+Display "Employee records written to employees.dat"

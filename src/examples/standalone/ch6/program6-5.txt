@@ -1,0 +1,14 @@
+// Declare a counter variable
+Declare Integer counter
+
+// Constant for the number of flips
+Constant Integer NUM_FLIPS = 10
+
+For counter = 1 To NUM_FLIPS
+   // Simulate the coin flip.
+   If random(1,2) == 1 Then
+      Display "Heads"
+   Else
+      Display "Tails"
+   End If
+End For

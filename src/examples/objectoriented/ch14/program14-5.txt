@@ -1,0 +1,27 @@
+Module main()
+   // Variables to hold user input.
+   Declare Integer questions, missed
+   
+   // Class variable to reference a FinalExam object.
+   Declare FinalExam exam
+   
+   // Prompt the user for the number of questions
+   // on the exam.
+   Display "Enter the number of questions on the exam."
+   Input questions
+   
+   // Prompt the user for the number of questions
+   // missed by the student.
+   Display "Enter the number of questions that the ",
+           "student missed."
+   Input missed
+   
+   // Create a FinalExam object.
+   Set exam = New FinalExam(questions, missed)
+   
+   // Display the test results.
+   Display "Each question on the exam counts ",
+           exam.getPointsEach(), " points."
+   Display "The exam score is ", exam.getScore()
+   Display "The exam grade is ", exam.getGrade()
+End Module           
