@@ -45,7 +45,7 @@ GUI mode:
 Command-line compilation of stand-alone programs:
 * java -jar oxymoron.jar [program2-13.txt](src/examples/standalone/ch2/program2-13.txt)
 
-Command-line compilation of orient-oriented programs:
+Command-line compilation of object-oriented programs:
 * java -jar oxymoron.jar [program14-1.txt](src/examples/objectoriented/ch14/program14-1.txt) [classlisting14-3.txt](src/examples/objectoriented/ch14/classlisting14-3.txt)
 
 Batch test mode:
