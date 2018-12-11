@@ -27,7 +27,7 @@ Oxymoron may be run in the following modes:
 * The batch test mode is primarily for homework grading. To use the batch test mode, create three directories: *source_directory*, *stdin_directory*, and *stdout_directory*. Put all program scripts in the *source_directory*. In the *stdin_directory*, provide one file for each test run. Data in the file will be fed to each program script as if it were from stdin. Any stdout output from the program scripts will be logged in the *stdout_directory*.
 
 ### System requirements:
-Java 8
+Java 10
 
 
 ### How to create a pseudocode program
